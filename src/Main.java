@@ -1,3 +1,4 @@
+import java.lang.reflect.Array;
 import java.util.Scanner;
 
 public class Main{
@@ -16,8 +17,23 @@ public class Main{
         System.out.println("3) Exit");
     }
 
-    public static Hero createHero(int cmd){
-
+    public static void createHero(int cmd){
+        //Display Hero's
+        String[] types = {"Druid", "DeatNight", "Hunter"};
+        Hero hero;
+        //Save Selection
+        if(cmd == 0){
+//            hero = new Druid()
+            System.out.println("This is a Druid");
+        } else if (cmd == 1) {
+//            hero = new DeatNight()
+            System.out.println("This is a DeatNight");
+        } else if (cmd == 2) {
+//            hero = new Hunter()
+            System.out.println("This is a Hunter");
+        } else {
+            System.out.println("WRONG!");
+        }
     }
 
     public static void main(String[] args) {
@@ -31,9 +47,6 @@ public class Main{
                         System.out.println("Choose your hero!");
                         cmd = input.nextInt();
                         createHero(cmd);
-
-
-
 
                         System.out.println("1) What is your heros name?");
                         String name = input.nextLine();

@@ -3,7 +3,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Setter @Getter
-public class Druid  extends Hero{
+public class Druid  extends Hero implements Warrior{
 
     public Druid(){
         this.setBase(20,20,100,0,0,0,0);
@@ -18,4 +18,8 @@ public class Druid  extends Hero{
     public void attack(){
         System.out.println("SPAAAARRRRTTTTTAAAAA!!!!!");
     };
+    @Override
+    public void escape() {
+        System.out.println("this bitch ran");
+    }
 }

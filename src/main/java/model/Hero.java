@@ -14,7 +14,6 @@ public abstract class Hero implements Warrior{
     private int y,x;
     private String name;
 
-
     Hero(){}
 
     Hero(String name){
@@ -30,5 +29,4 @@ public abstract class Hero implements Warrior{
         setY(y);
         setXp(xp);
     }
-
 }

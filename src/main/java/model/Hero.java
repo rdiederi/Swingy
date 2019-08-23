@@ -13,6 +13,9 @@ public abstract class Hero implements Warrior{
     private int lvl;
     private int y,x;
     private String name;
+    private String weapon;
+    private String armor;
+    private String helm;
 
     Hero(){}
 
@@ -20,7 +23,7 @@ public abstract class Hero implements Warrior{
         this.name = name;
     }
 
-    public void setBase(int attack, int defense, int hp, int xp, int lvl, int x, int y){
+    public void setBase(int attack, int defense, int hp, int xp, int lvl, int x, int y, String name, String weapon, String armor, String helm){
         setAttack(attack);
         setDefense(defense);
         setHp(hp);
@@ -28,5 +31,9 @@ public abstract class Hero implements Warrior{
         setX(x);
         setY(y);
         setXp(xp);
+        setName(name);
+        setWeapon(weapon);
+        setArmor(armor);
+        setHelm(helm);
     }
 }

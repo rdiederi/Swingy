@@ -16,6 +16,7 @@
         <jdk.version>1.8</jdk.version>
         <lombok.version>1.18.8</lombok.version>
         <json.version>20190722</json.version>
+        <mysql-connector-java.version>8.0.17</mysql-connector-java.version>
     </properties>
 
     <dependencies>
@@ -31,6 +32,12 @@
             <groupId>org.json</groupId>
             <artifactId>json</artifactId>
             <version>20180130</version>
+        </dependency>
+
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.17</version>
         </dependency>
 
     </dependencies>

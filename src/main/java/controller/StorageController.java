@@ -1,8 +1,7 @@
 package controller;
 
-import jdk.nashorn.internal.parser.JSONParser;
-import org.json.simple.JASONArray;
-
+import org.json.JSONObject;
+import java.sql.*;
 import model.Warrior;
 
 import java.io.*;
@@ -10,7 +9,18 @@ import java.io.FileReader;
 
 public class StorageController {
     public static void readFile(){
-        Object obj = new JSONParser().parse(new FileReader("src/main/database/save.txt"));
+        try{
+//            Class.forName("com.mysql.jdbc.Driver");
+            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/swing","user","password");
+            Statement stmt=con.createStatement();
+            ResultSet rs=stmt.executeQuery("select * from hero");
+            int i = 1;
+            while(rs.next()) {
+                System.out.println(rs.getString(1) + "\n" + rs.getString(2) + "\n" + rs.getString(3) + "\n" + rs.getString(4) + "\n" + rs.getString(5) + "\n" + rs.getString(6) + "\n" + rs.getString(7) + "\n" + rs.getString(8) + "\n" + rs.getString(9) + "\n" + rs.getString(10) + "\n" + rs.getString(11) + "\n" + rs.getString(12));
+                i++;
+            }
+            con.close();
+        }catch(Exception e){ System.out.println(e);}
     }
 
     public static void writeToFile(Warrior hero) throws IOException {

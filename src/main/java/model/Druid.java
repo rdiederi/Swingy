@@ -6,12 +6,12 @@ import lombok.Setter;
 public class Druid  extends Hero implements Warrior{
 
     public Druid(){
-        this.setBase(20,20,100,0,0,0,0);
+        this.setBase(20,20,100,0,0,0,0, "Evan", "Sword", "", "");
     }
 
     public Druid(String name){
         super(name);
-        this.setBase(20,20,100,0,0,0,0);
+        this.setBase(20,20,100,0,0,0,0, name, "","","");
     }
 
     @Override

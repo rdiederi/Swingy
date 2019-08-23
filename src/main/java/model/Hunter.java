@@ -5,11 +5,11 @@ import lombok.Setter;
 @Setter @Getter
 public class Hunter extends Hero implements Warrior{
     public Hunter(){
-        this.setBase(25,15,80,0,0,0,0);
+        this.setBase(25,15,80,0,0,0,0, "Larry", "Sword", "", "");
     }
     public Hunter(String name){
         super(name);
-        this.setBase(25,15,80,0,0,0,0);
+        this.setBase(25,15,80,0,0,0,0, "Larry", "Sword", "", "");
     }
 
     @Override

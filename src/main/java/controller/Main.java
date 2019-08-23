@@ -10,6 +10,7 @@ public class Main{
         StorageController sC = new StorageController();
         Warrior warrior = new DeathNight();
         sC.writeToFile(warrior);
+        sC.readFile();
         ConsoleController.gameLoop();
     }
 }

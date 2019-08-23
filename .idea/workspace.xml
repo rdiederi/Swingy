@@ -1,36 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="13f128f1-4f4f-4851-b530-5c4024fec70f" name="Default Changelist" comment="">
+    <list default="true" id="36a168e2-0830-417d-884f-cfa8ef05044b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/$PRODUCT_WORKSPACE_FILE$" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/DeathNight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/DeathNight.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Druid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Druid.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Hero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Hunter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Hunter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Warrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Warrior.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/swingy_maven.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/StorageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/StorageController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/controller/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/DeathNight.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/DeathNight.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/Druid.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/Druid.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/Hero.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/Hero.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/Hunter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/Hunter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/Warrior.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/Warrior.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/StorageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/StorageController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/{&quot;lvl&quot;:&quot;1&quot;,&quot;defence&quot;:&quot;15&quot;,&quot;attack&quot;:&quot;10&quot;,&quot;hp&quot;:&quot;100&quot;}" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -40,31 +28,17 @@
     <option name="importingSettings">
       <MavenImportingSettings>
         <option name="importAutomatically" value="true" />
+        <option name="lookForNested" value="true" />
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectId" id="1Pm1lIUNqDjN23FOHG5D3ej5IlJ" />
+  <component name="ProjectId" id="1PouL2LFYgr4MyZKuYOi6RJMPWj" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.tslint" value="true" />
-    <property name="node.js.path.for.package.eslint" value="project" />
-    <property name="node.js.path.for.package.tslint" value="project" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="preferences.editor" />
-  </component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main" />
-    </key>
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -81,7 +55,7 @@
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="controller.Main" />
-      <module name="swingy" />
+      <module name="swingy_maven" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="controller.*" />
@@ -103,13 +77,13 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="13f128f1-4f4f-4851-b530-5c4024fec70f" name="Default Changelist" comment="" />
-      <created>1566464606198</created>
+      <changelist id="36a168e2-0830-417d-884f-cfa8ef05044b" name="Default Changelist" comment="" />
+      <created>1566552713277</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1566464606198</updated>
-      <workItem from="1566464607837" duration="12883000" />
-      <workItem from="1566486776542" duration="1419000" />
+      <updated>1566552713277</updated>
+      <workItem from="1566552727409" duration="630000" />
+      <workItem from="1566564484692" duration="1279000" />
     </task>
     <servers />
   </component>

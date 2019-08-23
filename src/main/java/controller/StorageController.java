@@ -1,35 +1,16 @@
 package controller;
 
-
-//import jdk.nashorn.internal.parser.JSONParser;
-import org.json.JSONObject;
+import jdk.nashorn.internal.parser.JSONParser;
+import org.json.simple.JASONArray;
 
 import model.Warrior;
 
 import java.io.*;
-
+import java.io.FileReader;
 
 public class StorageController {
     public static void readFile(){
-        try(BufferedReader br = new BufferedReader(new FileReader("src/main/database/save.txt"))) {
-
-            StringBuilder sb = new StringBuilder();
-            String line = br.readLine();
-
-            while (line != null) {
-                sb.append(line);
-                sb.append(System.lineSeparator());
-                line = br.readLine();
-            }
-            String everything = sb.toString();
-
-            System.out.println(everything);
-            return everything;
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        Object obj = new JSONParser().parse(new FileReader("src/main/database/save.txt"));
     }
 
     public static void writeToFile(Warrior hero) throws IOException {

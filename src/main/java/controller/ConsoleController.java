@@ -66,7 +66,7 @@ public class ConsoleController {
             switch (cmd){
                 case 1:
                     hero = createHero();
-//                    storageController.writeToFile(hero);
+//                  storageController.writeToFile(hero);
                     //gameStart(hero);
                     break;
                 case 2:

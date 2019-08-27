@@ -11,7 +11,7 @@ public class StorageController {
 
     public StorageController() {
         try {
-            cnx = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/", "root", "password");
+            cnx = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/", "user", "password");
             stmt = cnx.createStatement();
         } catch (Exception e){
             System.out.println("[ERROR] " + e.getMessage());
@@ -54,7 +54,7 @@ public class StorageController {
     {
         int type;
 
-        String query = "INSERT INTO "+ db + ".hero (attack, defense, hp, lvl, xp, name, type) VALUES (?,?,?,?,?,?, ?);";
+        String query = "INSERT INTO "+ db + ".hero (attack, defense, hp, lvl, xp, name, type) VALUES (?,?,?,?,?,?,?);";
         try
         {
             PreparedStatement statement = cnx.prepareStatement(query);
@@ -72,6 +72,11 @@ public class StorageController {
         {
             System.out.println("[ERROR] " + e.getMessage());
         }
+    }
+
+    public ResultSet loadGame() throws SQLException {
+        String query = "SELECT * FROM "+ db + ".hero;";
+        return stmt.executeQuery(query);
     }
 
 //    public void updateHero(Hero hero) {

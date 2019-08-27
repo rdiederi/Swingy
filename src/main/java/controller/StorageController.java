@@ -12,7 +12,7 @@ public class StorageController {
 
     public StorageController() {
         try {
-            cnx = DriverManager.getConnection("jdbc:mysql://localhost:3306/swing", "user", "password");
+            cnx = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/", "root", "password");
             stmt = cnx.createStatement();
         } catch (Exception e){
             System.out.println("[ERROR] " + e.getMessage());
@@ -42,9 +42,7 @@ public class StorageController {
                 "lvl INTEGER(11) NOT NULL , " +
                 "xp INTEGER(11) NOT NULL , " +
                 "name VARCHAR(50) NOT NULL , " +
-                "weapon INTEGER(1) NOT NULL ," +
-                "armor INTEGER(1) NOT NULL ," +
-                "helm INTEGER(1) NOT NULL);";
+                "type VARCHAR(50) NOT NULL);";
 
         try{
             if(stmt.executeUpdate(createTable) >= 0) {
@@ -70,9 +68,6 @@ public class StorageController {
             statement.setInt(4, lvl);
             statement.setInt(5, xp);
             statement.setString(6, name);
-            statement.setString(7, weapon);
-            statement.setString(8, armor);
-            statement.setString(9, helm);
 
             int count = statement.executeUpdate();
             if (count > 0)

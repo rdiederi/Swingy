@@ -55,4 +55,17 @@ public class ConsoleView {
 
         System.out.println("|------------------------------------------------|");
     }
+
+    public static void printHeroStats(Hero hero)
+    {
+        System.out.println("--------------------");
+        System.out.println("Name: " + hero.getName());
+        System.out.println("Type: " + hero.getType());
+        System.out.println("Attack: " + hero.getAttack());
+        System.out.println("Defense: " + hero.getDefense());
+        System.out.println("HP: " + hero.getHp());
+        System.out.println("Experience: " + hero.getXp());
+        System.out.println("--------------------");
+        System.out.println();
+    }
 }

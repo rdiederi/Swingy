@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="swingy" />
         <module name="swingy_maven" />
+        <module name="roelf" />
       </profile>
     </annotationProcessing>
   </component>

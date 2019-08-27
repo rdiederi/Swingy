@@ -1,21 +1,17 @@
 package model;
 
-import lombok.Getter;
-import lombok.Setter;
+import java.util.Locale;
 
-@Setter @Getter
-public abstract class Hero implements Warrior{
+public abstract class Hero{
 
-    private int attack;
-    private int defense;
-    private int hp;
-    private int xp;
-    private int lvl;
-    private int y,x;
-    private String name;
-    private int weapon;
-    private int armor;
-    private int helm;
+    public int attack;
+    public int defense;
+    public int hp;
+    public int xp;
+    public int lvl;
+    public int y,x;
+    public String name;
+    public StringBuilder type = new StringBuilder(String.valueOf(this.getClass())).delete(0, 12);
 
     Hero(){}
 
@@ -25,7 +21,7 @@ public abstract class Hero implements Warrior{
 
 
 
-    public void setBase(int attack, int defense, int hp, int xp, int lvl, int x, int y, String name, int weapon, int armor, int helm){
+    public void setBase(int attack, int defense, int hp, int xp, int lvl, int x, int y){
         setAttack(attack);
         setDefense(defense);
         setHp(hp);
@@ -33,9 +29,31 @@ public abstract class Hero implements Warrior{
         setX(x);
         setY(y);
         setXp(xp);
-        setName(name);
-        setWeapon(weapon);
-        setArmor(armor);
-        setHelm(helm);
     }
+
+    public abstract String getName();
+    public abstract void setName(String name);
+
+    public abstract int getAttack();
+    public abstract void setAttack(int attack);
+
+    public abstract int getDefense();
+    public abstract void setDefense(int defense);
+
+    public abstract int getHp();
+    public abstract void setHp(int hp);
+
+    public abstract int getXp();
+    public abstract void setXp(int xp);
+
+    public abstract int getLvl();
+    public abstract void setLvl(int lvl);
+
+    public abstract int getY();
+    public abstract void setY(int y);
+
+    public abstract int getX();
+    public abstract void setX(int x);
+
+    public abstract StringBuilder getType();
 }

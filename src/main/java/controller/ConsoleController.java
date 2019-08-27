@@ -1,43 +1,32 @@
 package controller;
 
 
-import model.DeathNight;
-import model.Druid;
-import model.Hunter;
-import model.Warrior;
+import model.*;
 import view.ConsoleView;
-
 import java.io.IOException;
 import java.util.Scanner;
 
 public class ConsoleController {
 
-    public static Warrior nameHero(int type, Scanner input) {
-        Warrior hero = null;
+    public static Hero nameHero(int type, Scanner input) {
 
-        String types[] = {"Druid", "DeathNight", "Hunter"};
+        String types[] = {"Druid", "Hunter", "DeathNight"};
 
         System.out.println("Give your " + types[type - 1] + " a name:");
         System.out.print(">> ");
         String name = input.nextLine();
         switch (type) {
             case 1:
-                hero = new Druid(name);
-                break;
+                return new Druid(name);
             case 2:
-                hero = new DeathNight(name);
-                break;
+                return new Hunter(name);
             case 3:
-                hero = new Hunter(name);
-                break;
-
+               return new DeathNight(name);
         }
-        return hero;
+        return null;
     }
 
-    public static Warrior createHero() {
-        String name;
-        Warrior hero = null;
+    public static Hero createHero() {
 
         ConsoleView.printHeroClasses();
         System.out.print(">> ");
@@ -47,16 +36,20 @@ public class ConsoleController {
 
         //Save Selection
         if (Integer.parseInt(cmd) > 0 && Integer.parseInt(cmd) < 4) {
-            hero = nameHero(Integer.parseInt(cmd), input);
+            return nameHero(Integer.parseInt(cmd), input);
         } else {
             System.out.println("Wrong! Try Again!");
             createHero();
         }
-        return hero;
+        return null;
+    }
+
+    public static void startGame(Hero hero) {
+        ConsoleView.printHeroStats(hero);
     }
 
     public static void gameLoop() throws IOException {
-        Warrior hero = null;
+       Hero hero = null;
 
         while (true){
             ConsoleView.printWelcome();
@@ -65,9 +58,8 @@ public class ConsoleController {
             int cmd = input.nextInt();
             switch (cmd){
                 case 1:
-                    hero = createHero();
-//                  storageController.writeToFile(hero);
-                    //gameStart(hero);
+                   hero = createHero();
+                    startGame(hero);
                     break;
                 case 2:
                     //Load Game

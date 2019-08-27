@@ -18,7 +18,6 @@ public abstract class Hero{
     }
 
 
-
     public void setBase(int attack, int defense, int hp, int xp, int lvl, int x, int y){
         setAttack(attack);
         setDefense(defense);

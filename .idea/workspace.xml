@@ -3,6 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="36a168e2-0830-417d-884f-cfa8ef05044b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/ConsoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ConsoleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/StorageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/StorageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Hero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/ConsoleView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/ConsoleView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/ConsoleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/ConsoleController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/StorageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/StorageController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/Hero.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/Hero.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/view/ConsoleView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/view/ConsoleView.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -61,7 +71,7 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
       <option name="MAIN_CLASS_NAME" value="controller.Main" />
-      <module name="roelf" />
+      <module name="swingy_maven" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="controller.*" />

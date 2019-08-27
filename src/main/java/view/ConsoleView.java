@@ -5,7 +5,11 @@ import model.Druid;
 import model.Hero;
 import model.Hunter;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
 public class ConsoleView {
+
     public static void printWelcome (){
         System.out.println("Welcome!");
         System.out.println("Choose an option:");
@@ -15,7 +19,6 @@ public class ConsoleView {
     }
 
     public static void printHeroClasses() {
-
         Druid druid = new Druid();
         Hunter hunter = new Hunter();
         DeathNight dN = new DeathNight();
@@ -67,5 +70,23 @@ public class ConsoleView {
         System.out.println("Experience: " + hero.getXp());
         System.out.println("--------------------");
         System.out.println();
+    }
+
+    public static void printSavedHeroes(ResultSet rset) throws SQLException {
+        int rowCount = 0;
+        System.out.println("SELECT Hero by ID:2");
+        while(rset.next()) {
+            System.out.println("ID: " + rset.getInt("id"));
+            System.out.println("--------------------");
+            System.out.println("Name: " + rset.getString("name"));
+            System.out.println("Type: " + rset.getString("type"));
+            System.out.println("Attack: " + rset.getInt("attack"));
+            System.out.println("Defense: " + rset.getInt("defense"));
+            System.out.println("HP: " + rset.getInt("hp"));
+            System.out.println("Experience: " + rset.getInt("xp"));
+            System.out.println("--------------------");
+            System.out.println();
+            ++rowCount;
+        }
     }
 }

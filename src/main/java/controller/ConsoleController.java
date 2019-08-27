@@ -8,6 +8,7 @@ import model.Hunter;
 import view.ConsoleView;
 
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.Scanner;
 
 public class ConsoleController {
@@ -56,7 +57,7 @@ public class ConsoleController {
         ConsoleView.printHeroStats(hero);
     }
 
-    public static void gameLoop() throws IOException {
+    public static void gameLoop() throws IOException, SQLException {
        Hero hero = null;
        StorageController sc = new StorageController();
        sc.createDB();
@@ -75,6 +76,7 @@ public class ConsoleController {
                 case 2:
                     //Load Game
                     System.out.println("Load your game!");
+                    ConsoleView.printSavedHeroes(sc.loadGame());
                     break;
                 case 3:
                     //Exit

@@ -1,8 +1,12 @@
 package controller;
 
 
-import model.*;
+import model.DeathNight;
+import model.Druid;
+import model.Hero;
+import model.Hunter;
 import view.ConsoleView;
+
 import java.io.IOException;
 import java.util.Scanner;
 
@@ -26,7 +30,9 @@ public class ConsoleController {
         return null;
     }
 
-    public static Hero createHero() {
+    public static Hero createHero(StorageController sc) {
+
+        Hero hero = null;
 
         ConsoleView.printHeroClasses();
         System.out.print(">> ");
@@ -36,10 +42,12 @@ public class ConsoleController {
 
         //Save Selection
         if (Integer.parseInt(cmd) > 0 && Integer.parseInt(cmd) < 4) {
-            return nameHero(Integer.parseInt(cmd), input);
+            hero = nameHero(Integer.parseInt(cmd), input);
+            sc.saveHero(hero);
+            return hero;
         } else {
             System.out.println("Wrong! Try Again!");
-            createHero();
+            createHero(sc);
         }
         return null;
     }
@@ -50,6 +58,9 @@ public class ConsoleController {
 
     public static void gameLoop() throws IOException {
        Hero hero = null;
+       StorageController sc = new StorageController();
+       sc.createDB();
+       sc.createTB();
 
         while (true){
             ConsoleView.printWelcome();
@@ -58,7 +69,7 @@ public class ConsoleController {
             int cmd = input.nextInt();
             switch (cmd){
                 case 1:
-                   hero = createHero();
+                   hero = createHero(sc);
                     startGame(hero);
                     break;
                 case 2:

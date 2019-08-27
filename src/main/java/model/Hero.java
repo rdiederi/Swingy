@@ -1,7 +1,5 @@
 package model;
 
-import java.util.Locale;
-
 public abstract class Hero{
 
     public int attack;
@@ -11,7 +9,7 @@ public abstract class Hero{
     public int lvl;
     public int y,x;
     public String name;
-    public StringBuilder type = new StringBuilder(String.valueOf(this.getClass())).delete(0, 12);
+    public String type = new StringBuilder(String.valueOf(this.getClass())).delete(0, 12).toString();
 
     Hero(){}
 
@@ -55,5 +53,5 @@ public abstract class Hero{
     public abstract int getX();
     public abstract void setX(int x);
 
-    public abstract StringBuilder getType();
+    public abstract String getType();
 }

@@ -91,7 +91,7 @@ public class Druid  extends Hero{
         this.x = x;
     }
 
-    public StringBuilder getType() {
+    public String getType() {
         return this.type;
     }
 

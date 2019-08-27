@@ -1,14 +1,13 @@
 package controller;
 
-import org.json.JSONObject;
+import model.Hero;
+
 import java.sql.*;
-import model.Warrior;
-import java.io.*;
-import java.io.FileReader;
 
 public class StorageController {
     private Connection cnx;
     private Statement stmt;
+    private final String db = "swingy";
 
     public StorageController() {
         try {
@@ -21,10 +20,9 @@ public class StorageController {
 
     public StorageController createDB()
     {
-        String query =  "CREATE DATABASE IF NOT EXISTS swing";
+        String query =  "CREATE DATABASE IF NOT EXISTS " + db;
         try (Statement stm = cnx.createStatement()){
             stm.executeUpdate(query);
-            System.out.println("DATABASE CREATED!");
         } catch (SQLException e)
         {
             System.out.println("[ERROR] " + e.getMessage());
@@ -34,8 +32,8 @@ public class StorageController {
 
     public StorageController createTB(){
 
-        String createTable = "CREATE TABLE IF NOT EXISTS swing.hero("  +
-                "id INTEGER(11) NOT NULL AUTO_INCREMENT PRIMARY KEY , " +
+        String createTable = "CREATE TABLE IF NOT EXISTS " + db + ".hero" +
+                "(id INTEGER(11) NOT NULL AUTO_INCREMENT PRIMARY KEY , " +
                 "attack INTEGER(11) NOT NULL , " +
                 "defense INTEGER(11) NOT NULL , " +
                 "hp INTEGER(11) NOT NULL , " +
@@ -45,37 +43,38 @@ public class StorageController {
                 "type VARCHAR(50) NOT NULL);";
 
         try{
-            if(stmt.executeUpdate(createTable) >= 0) {
-                System.out.println("TABLE CREATED!!!");
-            }
+            stmt.executeUpdate(createTable);
         }catch(SQLException e){
             System.out.println(e);
         }
         return (this);
     }
 
-    public void createHero(int attack, int defense, int hp, int lvl, int xp, String name, String weapon, String armor, String helm)
+    public void saveHero(Hero hero)
     {
         int type;
 
-        String query = "INSERT INTO hero (attack, defense, hp, lvl, xp, name, weapon, armor, helm) VALUES (?,?,?,?,?,?,?,?,?);";
+        String query = "INSERT INTO "+ db + ".hero (attack, defense, hp, lvl, xp, name, type) VALUES (?,?,?,?,?,?, ?);";
         try
         {
             PreparedStatement statement = cnx.prepareStatement(query);
-            statement.setInt(1, attack);
-            statement.setInt(2, defense);
-            statement.setInt(3, hp);
-            statement.setInt(4, lvl);
-            statement.setInt(5, xp);
-            statement.setString(6, name);
+            statement.setInt(1, hero.getAttack());
+            statement.setInt(2, hero.getDefense());
+            statement.setInt(3, hero.getHp());
+            statement.setInt(4, hero.getLvl());
+            statement.setInt(5, hero.getXp());
+            statement.setString(6, hero.getName());
+            statement.setString(7, hero.getType());
 
-            int count = statement.executeUpdate();
-            if (count > 0)
-                System.out.println("Record created");
+            statement.executeUpdate();
         }
         catch (SQLException e)
         {
             System.out.println("[ERROR] " + e.getMessage());
         }
     }
+
+//    public void updateHero(Hero hero) {
+//
+//    }
 }

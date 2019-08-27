@@ -1,7 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="36a168e2-0830-417d-884f-cfa8ef05044b" name="Default Changelist" comment="" />
+    <list default="true" id="36a168e2-0830-417d-884f-cfa8ef05044b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/ConsoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ConsoleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/StorageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/StorageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/DeathNight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/DeathNight.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Druid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Druid.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Hero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Hunter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Hunter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/ConsoleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/ConsoleController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/StorageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/StorageController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/DeathNight.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/DeathNight.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/Druid.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/Druid.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/Hero.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/Hero.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/Hunter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/Hunter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/view/ConsoleView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/view/ConsoleView.class" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +106,7 @@
       <workItem from="1566564484692" duration="7586000" />
       <workItem from="1566806846144" duration="9018000" />
       <workItem from="1566838231719" duration="4109000" />
-      <workItem from="1566880086722" duration="5606000" />
+      <workItem from="1566880086722" duration="8525000" />
     </task>
     <task id="LOCAL-00001" summary="Added Stuff">
       <created>1566886178596</created>
@@ -99,7 +115,14 @@
       <option name="project" value="LOCAL" />
       <updated>1566886178596</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added Stuff">
+      <created>1566886206005</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1566886206005</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

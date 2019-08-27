@@ -90,7 +90,7 @@ public class Hunter extends Hero{
     }
 
     @Override
-    public StringBuilder getType() {
+    public String getType() {
         return this.type;
     }
 

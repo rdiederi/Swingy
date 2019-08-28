@@ -1,4 +1,4 @@
-package model;
+package za.co.swingy.model;
 
 public abstract class Hero{
 

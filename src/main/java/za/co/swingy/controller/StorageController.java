@@ -1,6 +1,6 @@
-package controller;
+package za.co.swingy.controller;
 
-import model.Hero;
+import za.co.swingy.model.Hero;
 
 import java.sql.*;
 
@@ -11,7 +11,7 @@ public class StorageController {
 
     public StorageController() {
         try {
-            cnx = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/", "user", "password");
+            cnx = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/", "root", "password");
             stmt = cnx.createStatement();
         } catch (Exception e){
             System.out.println("[ERROR] " + e.getMessage());
@@ -74,7 +74,7 @@ public class StorageController {
         }
     }
 
-    public ResultSet loadGame() throws SQLException {
+    public ResultSet loadStoredHeroes() throws SQLException {
         String query = "SELECT * FROM "+ db + ".hero;";
         return stmt.executeQuery(query);
     }

@@ -1,11 +1,11 @@
-package controller;
+package za.co.swingy.controller;
 
 
-import model.DeathNight;
-import model.Druid;
-import model.Hero;
-import model.Hunter;
-import view.ConsoleView;
+import za.co.swingy.model.DeathNight;
+import za.co.swingy.model.Druid;
+import za.co.swingy.model.Hero;
+import za.co.swingy.model.Hunter;
+import za.co.swingy.view.ConsoleView;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -76,7 +76,7 @@ public class ConsoleController {
                 case 2:
                     //Load Game
                     System.out.println("Load your game!");
-                    ConsoleView.printSavedHeroes(sc.loadGame());
+                    ConsoleView.printSavedHeroes(sc.loadStoredHeroes());
                     break;
                 case 3:
                     //Exit

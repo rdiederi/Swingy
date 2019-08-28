@@ -1,4 +1,4 @@
-package model;
+package za.co.swingy.model;
 
 public class DeathNight extends Hero{
     public DeathNight(){  this.setBase(40,10,150,0,0,0,0);    }

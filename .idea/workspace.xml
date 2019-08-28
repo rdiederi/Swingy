@@ -2,23 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="36a168e2-0830-417d-884f-cfa8ef05044b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/za/co/swingy/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/database/save.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/ConsoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/co/swingy/controller/ConsoleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/StorageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/co/swingy/controller/StorageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Artifacts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/co/swingy/model/Artifacts.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/DeathNight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/co/swingy/model/DeathNight.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Druid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/co/swingy/model/Druid.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/co/swingy/model/Hero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Hunter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/co/swingy/model/Hunter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Warrior.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/ConsoleView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/co/swingy/view/ConsoleView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/ConsoleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/ConsoleController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/StorageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/StorageController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/view/ConsoleView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/view/ConsoleView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/co/swingy/model/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/co/swingy/model/Hero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/ConsoleController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/StorageController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/Artifacts.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/DeathNight.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/Druid.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/Hero.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/Hunter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/Warrior.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/view/ConsoleView.class" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -73,7 +70,14 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.App">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="za.co.swingy.App" />
+      <module name="roelf" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="11" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -92,6 +96,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.App" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -112,7 +117,7 @@
       <workItem from="1566838231719" duration="4109000" />
       <workItem from="1566880086722" duration="9940000" />
       <workItem from="1566929590413" duration="1844000" />
-      <workItem from="1566964168971" duration="1673000" />
+      <workItem from="1566964168971" duration="2895000" />
     </task>
     <task id="LOCAL-00001" summary="Added Stuff">
       <created>1566886178596</created>
@@ -135,7 +140,14 @@
       <option name="project" value="LOCAL" />
       <updated>1566889866705</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="- Code refactoring&#10;- Added hibernate and javax validation dependencies&#10;- Added maven-jar-plugin to compile swingy jar">
+      <created>1566970149612</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1566970149613</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -187,7 +199,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added Stuff" />
     <MESSAGE value="Now saving character to db when new game is started" />
-    <option name="LAST_COMMIT_MESSAGE" value="Now saving character to db when new game is started" />
+    <MESSAGE value="- Code refactoring&#10;- Added hibernate and javax validation dependencies&#10;- Added maven-jar-plugin to compile swingy jar" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Code refactoring&#10;- Added hibernate and javax validation dependencies&#10;- Added maven-jar-plugin to compile swingy jar" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>

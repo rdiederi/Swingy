@@ -2,20 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="36a168e2-0830-417d-884f-cfa8ef05044b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/za/co/swingy/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/App.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/co/swingy/model/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/co/swingy/model/Hero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/ConsoleController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/StorageController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/Artifacts.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/DeathNight.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/Druid.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/Hero.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/Hunter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/Warrior.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/view/ConsoleView.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/co/swingy/controller/StorageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/co/swingy/controller/StorageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swing.db" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -47,6 +37,10 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -56,7 +50,16 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="preferences.editor" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main" />
+      <recent name="$PROJECT_DIR$/src/main/java/Database" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -117,7 +120,7 @@
       <workItem from="1566838231719" duration="4109000" />
       <workItem from="1566880086722" duration="9940000" />
       <workItem from="1566929590413" duration="1844000" />
-      <workItem from="1566964168971" duration="2895000" />
+      <workItem from="1566964168971" duration="7761000" />
     </task>
     <task id="LOCAL-00001" summary="Added Stuff">
       <created>1566886178596</created>
@@ -147,7 +150,14 @@
       <option name="project" value="LOCAL" />
       <updated>1566970149613</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="- Code refactoring">
+      <created>1566971649903</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1566971649903</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -200,7 +210,8 @@
     <MESSAGE value="Added Stuff" />
     <MESSAGE value="Now saving character to db when new game is started" />
     <MESSAGE value="- Code refactoring&#10;- Added hibernate and javax validation dependencies&#10;- Added maven-jar-plugin to compile swingy jar" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Code refactoring&#10;- Added hibernate and javax validation dependencies&#10;- Added maven-jar-plugin to compile swingy jar" />
+    <MESSAGE value="- Code refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Code refactoring" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>

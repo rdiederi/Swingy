@@ -73,19 +73,10 @@ public class ConsoleView {
     }
 
     public static void printSavedHeroes(ResultSet rset) throws SQLException {
-        int rowCount = 0;
-        System.out.println("SELECT Hero by ID:2");
+        int rowCount = 1;
+        System.out.println("SELECT Hero: ");
         while(rset.next()) {
-            System.out.println("ID: " + rset.getInt("id"));
-            System.out.println("--------------------");
-            System.out.println("Name: " + rset.getString("name"));
-            System.out.println("Type: " + rset.getString("type"));
-            System.out.println("Attack: " + rset.getInt("attack"));
-            System.out.println("Defense: " + rset.getInt("defense"));
-            System.out.println("HP: " + rset.getInt("hp"));
-            System.out.println("Experience: " + rset.getInt("xp"));
-            System.out.println("--------------------");
-            System.out.println();
+            System.out.print(rowCount + ". " + rset.getString("name") + "\t");
             ++rowCount;
         }
     }

@@ -3,14 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="36a168e2-0830-417d-884f-cfa8ef05044b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/co/swingy/controller/ConsoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/co/swingy/controller/ConsoleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/co/swingy/controller/StorageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/co/swingy/controller/StorageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/co/swingy/model/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/co/swingy/model/Hero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/co/swingy/model/characters/DeathNight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/co/swingy/model/characters/DeathNight.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/co/swingy/model/characters/Druid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/co/swingy/model/characters/Druid.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/co/swingy/model/characters/Hunter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/co/swingy/model/characters/Hunter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/co/swingy/model/items/Armor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/co/swingy/model/items/Armor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/co/swingy/model/items/Helm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/co/swingy/model/items/Helm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/co/swingy/view/ConsoleView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/co/swingy/view/ConsoleView.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -128,7 +121,7 @@
       <workItem from="1566929590413" duration="1844000" />
       <workItem from="1566964168971" duration="8512000" />
       <workItem from="1566995915810" duration="991000" />
-      <workItem from="1567051539530" duration="11169000" />
+      <workItem from="1567051539530" duration="11678000" />
     </task>
     <task id="LOCAL-00001" summary="Added Stuff">
       <created>1566886178596</created>
@@ -193,7 +186,14 @@
       <option name="project" value="LOCAL" />
       <updated>1567071633833</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="- Code refactoring&#10;- Added id to hero class to store id in class from database">
+      <created>1567072608765</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1567072608765</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -251,7 +251,8 @@
     <MESSAGE value="- Created Factory to create characters and drop items (incomplete)&#10;- Added Item interface&#10;- More code refactoring to suit builder design pattern" />
     <MESSAGE value="- Code refactoring&#10;- More Detail in Items (Armor...)&#10;- Added ItemController" />
     <MESSAGE value="- Code refactoring&#10;- Added a few more annotations for certain values" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Code refactoring&#10;- Added a few more annotations for certain values" />
+    <MESSAGE value="- Code refactoring&#10;- Added id to hero class to store id in class from database" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Code refactoring&#10;- Added id to hero class to store id in class from database" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>

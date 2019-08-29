@@ -15,7 +15,7 @@ import java.util.Scanner;
 
 public class ConsoleController {
 
-    public static Hero nameHero(int type, @org.jetbrains.annotations.NotNull Scanner input) {
+    public static Hero nameHero(int type, @NotNull Scanner input) {
 
         String[] types = {"Druid", "Hunter", "DeathNight"};
 

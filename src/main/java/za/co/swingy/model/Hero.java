@@ -4,6 +4,7 @@ import javax.validation.constraints.NotNull;
 
 public abstract class Hero{
 
+    public int id;
     public int attack;
     public int defense;
     public int hp;
@@ -30,6 +31,9 @@ public abstract class Hero{
         setY(y);
         setXp(xp);
     }
+
+    public abstract int getId();
+    public abstract void setId(int id);
 
     public abstract String getName();
     public abstract void setName(String name);

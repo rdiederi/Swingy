@@ -1,5 +1,6 @@
 package za.co.swingy.controller;
 
+import org.jetbrains.annotations.NotNull;
 import za.co.swingy.model.Hero;
 
 import java.sql.*;
@@ -46,15 +47,13 @@ public class StorageController {
         try{
             stmt.executeUpdate(createTable);
         }catch(SQLException e){
-            System.out.println(e);
+            System.out.println("[ERROR] " + e.getMessage());
         }
         return (this);
     }
 
-    public void saveHero(Hero hero)
+    public void saveHero(@NotNull Hero hero)
     {
-        int type;
-
         String query = "INSERT INTO "+ db + ".hero (attack, defense, hp, lvl, xp, name, type) VALUES (?,?,?,?,?,?,?);";
         try
         {
@@ -76,11 +75,18 @@ public class StorageController {
     }
 
     public ResultSet loadStoredHeroes() throws SQLException {
-        String query = "SELECT * FROM "+ db + ".hero;";
-        return stmt.executeQuery(query);
+        try {
+            String query = "SELECT * FROM " + db + ".hero;";
+            return stmt.executeQuery(query);
+        } catch (SQLException e) {
+            System.out.println("[ERROR] " + e.getMessage());
+        }
+        return null;
     }
 
-//    public void updateHero(Hero hero) {
-//
-//    }
+    public void updateDetails(Hero hero) throws SQLException {
+        String query = "UPDATE hero" +
+                "SET(attack, defense, hp, lvl, xp) VALUES(?,?,?,?,?)" +
+                "WHERE id = " + hero;
+    }
 }

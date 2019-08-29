@@ -3,7 +3,6 @@ package za.co.swingy.model.items;
 import za.co.swingy.model.Hero;
 import za.co.swingy.model.Item;
 
-
 public class Armor implements Item {
     private String name;
     private int stat;

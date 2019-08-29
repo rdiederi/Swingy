@@ -7,7 +7,6 @@ public class Helm implements Item {
     private String name;
     private int stat;
 
-
     public Helm() {
         name = "Helm";
         stat =  (int) (10 + Math.floor( (Math.random() * 70) + 1));

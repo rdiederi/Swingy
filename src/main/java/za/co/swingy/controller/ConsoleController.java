@@ -15,9 +15,9 @@ import java.util.Scanner;
 
 public class ConsoleController {
 
-    public static Hero nameHero(int type, Scanner input) {
+    public static Hero nameHero(int type, @org.jetbrains.annotations.NotNull Scanner input) {
 
-        String types[] = {"Druid", "Hunter", "DeathNight"};
+        String[] types = {"Druid", "Hunter", "DeathNight"};
 
         System.out.println("Give your " + types[type - 1] + " a name:");
         System.out.print(">> ");

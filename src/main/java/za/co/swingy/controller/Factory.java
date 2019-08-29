@@ -1,5 +1,6 @@
 package za.co.swingy.controller;
 
+import org.jetbrains.annotations.NotNull;
 import za.co.swingy.model.Hero;
 import za.co.swingy.model.Item;
 import za.co.swingy.model.characters.DeathNight;
@@ -7,7 +8,7 @@ import za.co.swingy.model.characters.Druid;
 import za.co.swingy.model.characters.Hunter;
 
 public class Factory {
-    public static Hero newHero (String heroClass) {
+    public static Hero newHero (@NotNull String heroClass) {
         Hero hero;
 
         if (heroClass.equalsIgnoreCase("hunter")) {

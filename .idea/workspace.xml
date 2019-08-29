@@ -2,15 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="36a168e2-0830-417d-884f-cfa8ef05044b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/za/co/swingy/controller/ItemController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/za/co/swingy/model/items/Armor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/za/co/swingy/model/items/Helm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/za/co/swingy/model/items/Weapon.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/co/swingy/controller/ConsoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/co/swingy/controller/ConsoleController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/za/co/swingy/controller/Factory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/co/swingy/controller/Factory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/co/swingy/model/Artifact.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/co/swingy/model/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/co/swingy/model/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/co/swingy/controller/ItemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/co/swingy/controller/ItemController.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -128,7 +123,7 @@
       <workItem from="1566929590413" duration="1844000" />
       <workItem from="1566964168971" duration="8512000" />
       <workItem from="1566995915810" duration="991000" />
-      <workItem from="1567051539530" duration="9607000" />
+      <workItem from="1567051539530" duration="10200000" />
     </task>
     <task id="LOCAL-00001" summary="Added Stuff">
       <created>1566886178596</created>
@@ -179,7 +174,14 @@
       <option name="project" value="LOCAL" />
       <updated>1567059669988</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="- Code refactoring&#10;- More Detail in Items (Armor...)&#10;- Added ItemController">
+      <created>1567069285266</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1567069285266</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -235,7 +237,8 @@
     <MESSAGE value="- Code refactoring" />
     <MESSAGE value="Added maven-assembly-plugin to compile to a single executable jar with all dependencies" />
     <MESSAGE value="- Created Factory to create characters and drop items (incomplete)&#10;- Added Item interface&#10;- More code refactoring to suit builder design pattern" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Created Factory to create characters and drop items (incomplete)&#10;- Added Item interface&#10;- More code refactoring to suit builder design pattern" />
+    <MESSAGE value="- Code refactoring&#10;- More Detail in Items (Armor...)&#10;- Added ItemController" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Code refactoring&#10;- More Detail in Items (Armor...)&#10;- Added ItemController" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>

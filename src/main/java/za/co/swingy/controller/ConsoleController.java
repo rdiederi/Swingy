@@ -37,6 +37,7 @@ public class ConsoleController {
         if (Integer.parseInt(cmd) > 0 && Integer.parseInt(cmd) < 4) {
             hero = nameHero(Integer.parseInt(cmd), input);
             sc.saveHero(hero);
+            sc.setHeroId(hero);
             return hero;
         } else {
             System.out.println("Wrong! Try Again!");
@@ -45,7 +46,12 @@ public class ConsoleController {
         return null;
     }
 
-    public static void startGame(Hero hero) {
+    public static void startGame(Hero hero) throws SQLException {
+        hero.setAttack(500);
+        hero.setDefense(800);
+        hero.setLvl(17);
+        hero.setXp(18);
+        StorageController.updateStats(hero);
         ConsoleView.printHeroStats(hero);
     }
 
@@ -66,9 +72,10 @@ public class ConsoleController {
                     startGame(hero);
                     break;
                 case 2:
-                    //Load Game
-                    System.out.println("Load your game!");
                     ConsoleView.printSavedHeroes(sc.loadGameData());
+                    cmd = input.nextInt();
+                    hero = StorageController.loadHero(sc.loadGameData(), cmd);
+                    startGame(hero);
                     break;
                 case 3:
                     //Exit

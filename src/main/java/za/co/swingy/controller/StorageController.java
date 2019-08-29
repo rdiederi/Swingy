@@ -1,18 +1,16 @@
 package za.co.swingy.controller;
 
-import org.jetbrains.annotations.NotNull;
 import za.co.swingy.model.Hero;
 
 import java.sql.*;
 
 public class StorageController {
-    private Connection cnx;
+    private static Connection cnx;
     private Statement stmt;
-    private final String db = "swingy";
+    private final static String db = "swingy";
 
     public StorageController() {
         try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
             cnx = DriverManager.getConnection("jdbc:mysql://127.0.0.1:", "root", "password");
             stmt = cnx.createStatement();
         } catch (Exception e){
@@ -52,12 +50,32 @@ public class StorageController {
         return (this);
     }
 
-    public void saveHero(@NotNull Hero hero)
+    public void setHeroId(Hero hero) {
+        int id = 0;
+        try {
+            String query = "SELECT id FROM " + db + ".hero " +
+                    "WHERE name = '"+hero.getName()+"';";
+            ResultSet resultSet;
+
+            resultSet = stmt.executeQuery(query);
+
+            if (resultSet.next()) {
+                id = resultSet.getInt("id");
+            }
+
+            hero.setId(id);
+        } catch (SQLException e) {
+            System.out.println("ERROR: " + "[" + new Exception().getStackTrace()[0].getMethodName() + "]" + " ->" + e.getMessage());
+        }
+    }
+
+    public void saveHero(Hero hero)
     {
         String query = "INSERT INTO "+ db + ".hero (attack, defense, hp, lvl, xp, name, type) VALUES (?,?,?,?,?,?,?);";
         try
         {
-            PreparedStatement statement = cnx.prepareStatement(query);
+            PreparedStatement statement;
+            statement = cnx.prepareStatement(query);
             statement.setInt(1, hero.getAttack());
             statement.setInt(2, hero.getDefense());
             statement.setInt(3, hero.getHp());
@@ -70,23 +88,58 @@ public class StorageController {
         }
         catch (SQLException e)
         {
-            System.out.println("[ERROR] " + e.getMessage());
+            System.out.println("ERROR: " + "[" + new Exception().getStackTrace()[0].getMethodName() + "]" + " ->" + e.getMessage());
         }
     }
 
-    public ResultSet loadGameData() throws SQLException {
+    public ResultSet loadGameData() {
+        ResultSet resultSet;
         try {
             String query = "SELECT * FROM " + db + ".hero;";
-            return stmt.executeQuery(query);
+            resultSet = stmt.executeQuery(query);
+            return resultSet;
         } catch (SQLException e) {
-            System.out.println("[ERROR] " + e.getMessage());
+            System.out.println("ERROR: " + "[" + new Exception().getStackTrace()[0].getMethodName() + "]" + " ->" + e.getMessage());
         }
         return null;
     }
 
-    public void updateDetails(Hero hero) throws SQLException {
-        String query = "UPDATE hero" +
-                "SET(attack, defense, hp, lvl, xp) VALUES(?,?,?,?,?)" +
-                "WHERE id = " + hero;
+    public static Hero loadHero(ResultSet resultSet, int rowCount) {
+        try {
+            while (resultSet.next() && rowCount > 1)
+                --rowCount;
+            Hero hero = Factory.newHero(resultSet.getString("type"), resultSet.getString("name"));
+            hero.setId(resultSet.getInt("id"));
+            hero.setXp(resultSet.getInt("xp"));
+            hero.setLvl(resultSet.getInt("lvl"));
+            hero.setAttack(resultSet.getInt("attack"));
+            hero.setDefense(resultSet.getInt("defense"));
+            hero.setHp(resultSet.getInt("hp"));
+
+            return hero;
+        } catch (SQLException e){
+            System.out.println("ERROR: " + "[" + new Exception().getStackTrace()[0].getMethodName() + "]" + " ->" + e.getMessage());
+        }
+        return null;
+    }
+
+    public static void updateStats(Hero hero) {
+        try {
+            String query = "UPDATE " + db + ".hero " +
+                    "SET attack = ?, defense = ?, hp = ?, lvl = ?, xp = ? " +
+                    "WHERE id = " + hero.getId() + ";";
+
+            PreparedStatement statement = cnx.prepareStatement(query);
+
+            statement.setInt(1, hero.getAttack());
+            statement.setInt(2, hero.getDefense());
+            statement.setInt(3, hero.getHp());
+            statement.setInt(4, hero.getLvl());
+            statement.setInt(5, hero.getXp());
+
+            statement.executeUpdate();
+        } catch (SQLException e) {
+            System.out.println("[ERROR] " + e.getMessage());
+        }
     }
 }

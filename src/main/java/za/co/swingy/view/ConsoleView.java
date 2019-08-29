@@ -79,5 +79,6 @@ public class ConsoleView {
             System.out.print(rowCount + "|" + rset.getString("name") + "\t\t\t");
             ++rowCount;
         }
+
     }
 }

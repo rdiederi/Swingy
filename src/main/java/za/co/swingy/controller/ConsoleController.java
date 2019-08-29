@@ -1,12 +1,14 @@
 package za.co.swingy.controller;
 
 
-import za.co.swingy.model.DeathNight;
-import za.co.swingy.model.Druid;
+import org.hibernate.validator.constraints.Range;
 import za.co.swingy.model.Hero;
-import za.co.swingy.model.Hunter;
+import za.co.swingy.model.characters.DeathNight;
+import za.co.swingy.model.characters.Druid;
+import za.co.swingy.model.characters.Hunter;
 import za.co.swingy.view.ConsoleView;
 
+import javax.validation.constraints.NotNull;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.Scanner;
@@ -58,7 +60,8 @@ public class ConsoleController {
     }
 
     public static void gameLoop() throws IOException, SQLException {
-       Hero hero = null;
+       @NotNull
+       Hero hero;
        StorageController sc = new StorageController();
        sc.createDB();
        sc.createTB();
@@ -66,6 +69,7 @@ public class ConsoleController {
         while (true){
             ConsoleView.printWelcome();
             System.out.print(">> ");
+            @Range()
             Scanner input = new Scanner(System.in);
             int cmd = input.nextInt();
             switch (cmd){

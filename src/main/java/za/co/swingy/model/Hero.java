@@ -14,9 +14,9 @@ public abstract class Hero{
     public String name;
     public String type = new StringBuilder(String.valueOf(this.getClass())).delete(0, 12).toString();
 
-    Hero(){}
+    public Hero(){}
 
-    Hero(String name){
+    public Hero(String name){
         this.name = name;
     }
 

@@ -1,6 +1,8 @@
-package za.co.swingy.model;
+package za.co.swingy.model.characters;
 
-public class DeathNight extends Hero{
+import za.co.swingy.model.Hero;
+
+public class DeathNight extends Hero {
     public DeathNight(){  this.setBase(40,10,150,0,0,0,0);    }
     public DeathNight(String name){
         super(name);

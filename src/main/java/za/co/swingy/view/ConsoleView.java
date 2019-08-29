@@ -1,9 +1,9 @@
 package za.co.swingy.view;
 
-import za.co.swingy.model.DeathNight;
-import za.co.swingy.model.Druid;
 import za.co.swingy.model.Hero;
-import za.co.swingy.model.Hunter;
+import za.co.swingy.model.characters.DeathNight;
+import za.co.swingy.model.characters.Druid;
+import za.co.swingy.model.characters.Hunter;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

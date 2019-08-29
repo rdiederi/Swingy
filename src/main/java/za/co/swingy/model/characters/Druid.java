@@ -1,12 +1,16 @@
-package za.co.swingy.model;
+package za.co.swingy.model.characters;
 
-public class Hunter extends Hero{
-    public Hunter(){
-        this.setBase(25,15,80,0,0,0,0);
+import za.co.swingy.model.Hero;
+
+public class Druid  extends Hero {
+
+    public Druid(){
+        this.setBase(20,20,100,0,0,0,0);
     }
-    public Hunter(String name){
+
+    public Druid(String name){
         super(name);
-        this.setBase(25,15,80,0,0,0,0);
+        this.setBase(20,20,100,0,0,0,0);
     }
 
     @Override
@@ -89,7 +93,6 @@ public class Hunter extends Hero{
         this.x = x;
     }
 
-    @Override
     public String getType() {
         return this.type;
     }

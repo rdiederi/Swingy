@@ -28,6 +28,6 @@ public class Weapon implements Item {
 
     @Override
     public void applyItem(Hero hero) {
-        hero.setAttack(hero.getAttack() + this.stat);
+        hero.setAttack(hero.getAttack() + getStat());
     }
 }

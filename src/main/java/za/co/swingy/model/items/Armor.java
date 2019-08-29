@@ -28,6 +28,6 @@ public class Armor implements Item {
 
     @Override
     public void applyItem(Hero hero) {
-        hero.setDefense(hero.getDefense() + this.stat);
+        hero.setDefense(hero.getDefense() + getStat());
     }
 }

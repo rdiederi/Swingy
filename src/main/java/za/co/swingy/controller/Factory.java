@@ -23,4 +23,8 @@ public class Factory {
         Item item = ItemController.dropItem();
         return item;
     }
+
+    public static Map newMap(Hero hero) {
+        return new Map(hero);
+    }
 }

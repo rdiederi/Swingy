@@ -28,6 +28,6 @@ public class Helm implements Item {
 
     @Override
     public void applyItem(Hero hero) {
-        hero.setHp(hero.getHp() + this.stat);
+        hero.setHp(hero.getHp() + getStat());
     }
 }

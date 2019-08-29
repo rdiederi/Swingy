@@ -4,7 +4,6 @@
     <list default="true" id="36a168e2-0830-417d-884f-cfa8ef05044b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/za/co/swingy/controller/ConsoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/co/swingy/controller/ConsoleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/co/swingy/controller/StorageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/co/swingy/controller/StorageController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/za/co/swingy/view/ConsoleView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/co/swingy/view/ConsoleView.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -139,7 +138,7 @@
       <workItem from="1566995915810" duration="991000" />
       <workItem from="1567051539530" duration="13443000" />
       <workItem from="1567093517493" duration="234000" />
-      <workItem from="1567106018198" duration="9865000" />
+      <workItem from="1567106018198" duration="10533000" />
     </task>
     <task id="LOCAL-00001" summary="Added Stuff">
       <created>1566886178596</created>
@@ -225,7 +224,14 @@
       <option name="project" value="LOCAL" />
       <updated>1567107411326</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="- Code refactoring&#10;- Created and implement loadHero method">
+      <created>1567120459154</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1567120459154</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -285,7 +291,8 @@
     <MESSAGE value="- Code refactoring&#10;- Added a few more annotations for certain values" />
     <MESSAGE value="- Code refactoring&#10;- Added id to hero class to store id in class from database" />
     <MESSAGE value="- Code refactoring&#10;- Implemented Factory method newHero" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Code refactoring&#10;- Implemented Factory method newHero" />
+    <MESSAGE value="- Code refactoring&#10;- Created and implement loadHero method" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Code refactoring&#10;- Created and implement loadHero method" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>

@@ -74,9 +74,12 @@ public class ConsoleView {
 
     public static void printSavedHeroes(ResultSet rset) throws SQLException {
         int rowCount = 1;
-        System.out.println("SELECT Hero: ");
+        System.out.println("Load Hero: ");
         while(rset.next()) {
             System.out.print(rowCount + "|" + rset.getString("name") + "\t\t\t");
+            if (rowCount % 10 == 0) {
+                System.out.println();
+            }
             ++rowCount;
         }
 

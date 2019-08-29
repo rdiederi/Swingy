@@ -47,11 +47,6 @@ public class ConsoleController {
     }
 
     public static void startGame(Hero hero) throws SQLException {
-        hero.setAttack(500);
-        hero.setDefense(800);
-        hero.setLvl(17);
-        hero.setXp(18);
-        StorageController.updateStats(hero);
         ConsoleView.printHeroStats(hero);
     }
 
@@ -73,6 +68,7 @@ public class ConsoleController {
                     break;
                 case 2:
                     ConsoleView.printSavedHeroes(sc.loadGameData());
+                    System.out.print("\n>> ");
                     cmd = input.nextInt();
                     hero = StorageController.loadHero(sc.loadGameData(), cmd);
                     startGame(hero);

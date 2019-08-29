@@ -21,7 +21,7 @@ public class Factory {
     }
 
     public static Item newItem() {
-        Item item = null;
+        Item item = ItemController.dropItem();
         return item;
     }
 }

@@ -1,7 +1,5 @@
 package za.co.swingy.model;
 
-import javax.validation.constraints.NotNull;
-
 public abstract class Hero{
 
     public int id;
@@ -11,9 +9,8 @@ public abstract class Hero{
     public int xp;
     public int lvl;
     public int y,x;
-    @NotNull(message = "Name cannot be null")
     public String name;
-    public String type = new StringBuilder(String.valueOf(this.getClass())).delete(0, 12).toString();
+    public String type = new StringBuilder(String.valueOf(this.getClass())).delete(0, 36).toString();
 
     public Hero(){}
 

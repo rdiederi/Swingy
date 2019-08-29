@@ -74,7 +74,7 @@ public class StorageController {
         }
     }
 
-    public ResultSet loadStoredHeroes() throws SQLException {
+    public ResultSet loadGameData() throws SQLException {
         try {
             String query = "SELECT * FROM " + db + ".hero;";
             return stmt.executeQuery(query);

@@ -1,6 +1,5 @@
 package za.co.swingy.controller;
 
-import org.jetbrains.annotations.Nullable;
 import za.co.swingy.model.Item;
 import za.co.swingy.model.items.Armor;
 import za.co.swingy.model.items.Helm;
@@ -20,7 +19,6 @@ public class ItemController {
         itemType = itemTypes[randomItemIndex];
     }
 
-    @Nullable
     public static Item dropItem() {
         if (itemType.equalsIgnoreCase("weapon")) {
             item = new Weapon();

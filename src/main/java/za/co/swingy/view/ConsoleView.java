@@ -76,7 +76,7 @@ public class ConsoleView {
         int rowCount = 1;
         System.out.println("SELECT Hero: ");
         while(rset.next()) {
-            System.out.print(rowCount + ". " + rset.getString("name") + "\t");
+            System.out.print(rowCount + "|" + rset.getString("name") + "\t\t\t");
             ++rowCount;
         }
     }

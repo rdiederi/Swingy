@@ -1,36 +1,26 @@
 package za.co.swingy.controller;
 
 
-import org.hibernate.validator.constraints.Range;
 import za.co.swingy.model.Hero;
-import za.co.swingy.model.characters.DeathNight;
-import za.co.swingy.model.characters.Druid;
-import za.co.swingy.model.characters.Hunter;
 import za.co.swingy.view.ConsoleView;
 
-import javax.validation.constraints.NotNull;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.Scanner;
 
 public class ConsoleController {
 
-    public static Hero nameHero(int type, @NotNull Scanner input) {
+    public static Hero nameHero(int type, Scanner input) {
 
+        Factory factory = new Factory();
         String[] types = {"Druid", "Hunter", "DeathNight"};
 
         System.out.println("Give your " + types[type - 1] + " a name:");
         System.out.print(">> ");
         String name = input.nextLine();
-        switch (type) {
-            case 1:
-                return new Druid(name);
-            case 2:
-                return new Hunter(name);
-            case 3:
-               return new DeathNight(name);
-        }
-        return null;
+
+       return factory.newHero(types[type - 1], name);
+
     }
 
     public static Hero createHero(StorageController sc) {
@@ -60,7 +50,6 @@ public class ConsoleController {
     }
 
     public static void gameLoop() throws IOException, SQLException {
-       @NotNull
        Hero hero;
        StorageController sc = new StorageController();
        sc.createDB();
@@ -69,7 +58,6 @@ public class ConsoleController {
         while (true){
             ConsoleView.printWelcome();
             System.out.print(">> ");
-            @Range()
             Scanner input = new Scanner(System.in);
             int cmd = input.nextInt();
             switch (cmd){
@@ -80,7 +68,7 @@ public class ConsoleController {
                 case 2:
                     //Load Game
                     System.out.println("Load your game!");
-                    ConsoleView.printSavedHeroes(sc.loadStoredHeroes());
+                    ConsoleView.printSavedHeroes(sc.loadGameData());
                     break;
                 case 3:
                     //Exit

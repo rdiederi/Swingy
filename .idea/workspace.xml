@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="36a168e2-0830-417d-884f-cfa8ef05044b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/za/co/swingy/controller/Map.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/za/co/swingy/controller/ConsoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/co/swingy/controller/ConsoleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/co/swingy/controller/Factory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/co/swingy/controller/Factory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/co/swingy/model/items/Armor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/co/swingy/model/items/Armor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/co/swingy/model/items/Helm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/co/swingy/model/items/Helm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/co/swingy/model/items/Weapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/co/swingy/model/items/Weapon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/co/swingy/controller/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/co/swingy/controller/Map.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/co/swingy/view/ConsoleView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/co/swingy/view/ConsoleView.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -143,6 +140,7 @@
       <workItem from="1567051539530" duration="13443000" />
       <workItem from="1567093517493" duration="234000" />
       <workItem from="1567106018198" duration="12334000" />
+      <workItem from="1567138269734" duration="1883000" />
     </task>
     <task id="LOCAL-00001" summary="Added Stuff">
       <created>1566886178596</created>

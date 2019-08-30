@@ -6,7 +6,6 @@ import za.co.swingy.view.ConsoleView;
 
 import java.io.IOException;
 import java.sql.SQLException;
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class ConsoleController {
@@ -75,80 +74,72 @@ public class ConsoleController {
         x++;
     }
 
-    public static boolean isEnemy() {
-        if ("X".equalsIgnoreCase(map[y][x])) {
-            return (true);
-        }
-        return (false);
-    }
+//    public static boolean isEnemy() {
+//        if ("X".equalsIgnoreCase(map[y][x])) {
+//            return (true);
+//        }
+//        return (false);
+//    }
 
-    public static boolean isItem() {
-        if ("C".equalsIgnoreCase(map[y][x])) {
-            return (true);
-        }
-        return (false);
-    }
-
-    public static void newMap() {
-        ConsoleMap consoleMap = new ConsoleMap();
-        dimension = consoleMap.getMapDimensions(++level);
-        middle = ((dimension - 1) / 2);
-        map = consoleMap.generateMap(dimension, middle);
-        x = middle;
-        y = middle;
-    }
-
-    public  static void moveHero(String direction, String[][] map)
-    {
-        String[] directions = new String[]{"n", "s", "e", "w"};
-        boolean result = Arrays.stream(directions).anyMatch(direction::equals);
+//    public static boolean isItem() {
+//        if ("C".equalsIgnoreCase(map[y][x])) {
+//            return (true);
+//        }
+//        return (false);
+//    }
 
 
-        if (result) {
-            map[y][x] = ".";
-            if (!edgeOfMap()) {
-                if (direction.equals("n")) {
-                    moveUp();
-                    if(isItem()) {
-                        applyItem(item);
-                    } else if (isEnemy()) {
-                        // Fight or flight
-                    }
-                }
-                else if (direction.equals("s")) {
-                    moveDown();
-                    if(isItem()) {
-                        item = new DropItems(level).getItem();
-                        applyItem(item);
-                    } else if (isEnemy()) {
-                        // Fight or flight
-                    }
-                }
-                else if (direction.equals("e")) {
-                    moveRight();
-                    if(isItem()) {
-                        item = new DropItems(level).getItem();
-                        applyItem(item);
-                    } else if (isEnemy()) {
-                        // Fight or flight
-                    }
-                }
-                else if (direction.equals("w")) {
-                    moveLeft();
-                    if(isItem()) {
-                        item = new DropItems(level).getItem();
-                        applyItem(item);
-                    } else if (isEnemy()) {
-                        // Fight or flight
-                    }
-                }
-                map[y][x] = "1";
-            }
-            else {
-                newMap();
-            }
-        }
-    }
+//    public  static void moveHero(String direction, String[][] map)
+//    {
+//        String[] directions = new String[]{"n", "s", "e", "w"};
+//        boolean result = Arrays.stream(directions).anyMatch(direction::equals);
+//
+//
+//        if (result) {
+//            map[y][x] = ".";
+//            if (!edgeOfMap()) {
+//                if (direction.equals("n")) {
+//                    moveUp();
+//                    if(isItem()) {
+//                        applyItem(item);
+//                    } else if (isEnemy()) {
+//                        // Fight or flight
+//                    }
+//                }
+//                else if (direction.equals("s")) {
+//                    moveDown();
+//                    if(isItem()) {
+//                        item = new DropItems(level).getItem();
+//                        applyItem(item);
+//                    } else if (isEnemy()) {
+//                        // Fight or flight
+//                    }
+//                }
+//                else if (direction.equals("e")) {
+//                    moveRight();
+//                    if(isItem()) {
+//                        item = new DropItems(level).getItem();
+//                        applyItem(item);
+//                    } else if (isEnemy()) {
+//                        // Fight or flight
+//                    }
+//                }
+//                else if (direction.equals("w")) {
+//                    moveLeft();
+//                    if(isItem()) {
+//                        item = new DropItems(level).getItem();
+//                        applyItem(item);
+//                    } else if (isEnemy()) {
+//                        // Fight or flight
+//                    }
+//                }
+//                map[y][x] = "1";
+//            }
+//            else {
+//                newMap();
+//            }
+//        }
+//    }
 
     public static void startGame(Hero hero, String[][] map) throws SQLException {
         ConsoleView.printHeroStats(hero);
@@ -168,14 +159,16 @@ public class ConsoleController {
             switch (cmd){
                 case 1:
                    hero = createHero(sc);
-                    startGame(hero);
+//                    startGame(hero);
+
+
                     break;
                 case 2:
                     ConsoleView.printSavedHeroes(sc.loadGameData());
                     System.out.print("\n>> ");
                     cmd = input.nextInt();
                     hero = StorageController.loadHero(sc.loadGameData(), cmd);
-                    startGame(hero);
+//                    startGame(hero);
                     break;
                 case 3:
                     //Exit

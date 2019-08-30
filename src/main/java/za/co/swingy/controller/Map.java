@@ -1,28 +1,40 @@
 package za.co.swingy.controller;
 
+import za.co.swingy.model.Hero;
+
 import java.util.Random;
 
 public class Map {
-    //Colors
-    public static String ANSI_RED  = "\u001B[31m";
-    public static String ANSI_WHITE  = "\u001B[37m";
-    public static String ANSI_GREEN  = "\u001B[32m";
-    public static String ANSI_BLUE   = "\u001B[34m";
-    public static String ANSI_YELLOW = "\u001B[33m";
-    public static String ANSI_RESET = "\u001B[0m";
 
     private String[][] map;
+    private int middle;
+    private int dimension;
 
     public Map(){}
 
     public Map(Hero hero) {
-        map = generateMap();
+        int level = hero.getLvl();
+
+        dimension = getMapDimensions(level);
+        middle = getMiddleOfMap(dimension);
+        map = generateMap(dimension, middle);
+    }
+
+    public String[][] getMap() {
+        return map;
     }
 
     public static int getMapDimensions(int level)
     {
+        if (level < 1) {
+            level = 1;
+        }
         int dimension = (level - 1) * 5 + 10 - (level % 2);
         return  (dimension);
+    }
+
+    private int getMiddleOfMap(int dimension) {
+        return ((dimension - 1) / 2);
     }
 
     public static boolean inArray(int array[][], int vals[])
@@ -81,29 +93,6 @@ public class Map {
     }
 
 
-
-    public static void drawMap(int dimension, String map[][])
-    {
-        for (int col = 0; col < dimension; col++)
-        {
-            for (int row = 0; row < dimension; row++)
-            {
-                if (map[col][row].equals("X"))
-                    System.out.printf(ANSI_RED + map[col][row] + ANSI_RESET);
-                else if (map[col][row].equals("C"))
-                    System.out.printf(ANSI_YELLOW + map[col][row] + ANSI_RESET);
-                else if (map[col][row].equals("1"))
-                    System.out.printf(ANSI_GREEN + map[col][row] + ANSI_RESET);
-                else if (map[col][row].equals("."))
-                    System.out.printf(ANSI_BLUE + map[col][row] + ANSI_RESET);
-                else
-                    System.out.print(ANSI_WHITE + map[col][row] + ANSI_RESET);
-            }
-            System.out.println();
-        }
-    }
-
-
     public static int []generatePosition(int dimension)
     {
         Random rand = new Random();
@@ -115,5 +104,14 @@ public class Map {
         pos[1] = y;
 
         return (pos);
+    }
+
+        public void newMap(Hero hero) {
+        String[][] map = new String[0][];
+        dimension = Map.getMapDimensions(hero.getLvl());
+        middle = getMiddleOfMap(dimension);
+        map = Map.generateMap(dimension, middle);
+        hero.setX(middle);
+        hero.setY(middle);
     }
 }

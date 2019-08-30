@@ -37,7 +37,6 @@ public class ConsoleController {
         if (Integer.parseInt(cmd) > 0 && Integer.parseInt(cmd) < 4) {
             hero = nameHero(Integer.parseInt(cmd), input);
             sc.saveHero(hero);
-            sc.setHeroId(hero);
             return hero;
         } else {
             System.out.println("Wrong! Try Again!");

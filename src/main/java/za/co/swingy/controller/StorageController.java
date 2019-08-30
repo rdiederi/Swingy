@@ -18,7 +18,7 @@ public class StorageController {
         }
     }
 
-    public StorageController createDB()
+    void createDB()
     {
         String query =  "CREATE DATABASE IF NOT EXISTS " + db;
         try (Statement stm = cnx.createStatement()){
@@ -27,10 +27,9 @@ public class StorageController {
         {
             System.out.println("ERROR: " + "[" + new Exception().getStackTrace()[0].getMethodName() + "]" + " -> " + e.getMessage());
         }
-        return (this);
     }
 
-    public StorageController createTB(){
+    void createTB(){
 
         String createTable = "CREATE TABLE IF NOT EXISTS " + db + ".hero" +
                 "(id INTEGER(11) NOT NULL AUTO_INCREMENT PRIMARY KEY , " +
@@ -47,10 +46,9 @@ public class StorageController {
         }catch(SQLException e){
             System.out.println("ERROR: " + "[" + new Exception().getStackTrace()[0].getMethodName() + "]" + " -> " + e.getMessage());
         }
-        return (this);
     }
 
-    public void setHeroId(Hero hero) {
+    private void setHeroId(Hero hero) {
         int id = 0;
         try {
             String query = "SELECT id FROM " + db + ".hero " +
@@ -69,7 +67,7 @@ public class StorageController {
         }
     }
 
-    public void saveHero(Hero hero)
+    void saveHero(Hero hero)
     {
         String query = "INSERT INTO "+ db + ".hero (attack, defense, hp, lvl, xp, name, type) VALUES (?,?,?,?,?,?,?);";
         try
@@ -85,6 +83,7 @@ public class StorageController {
             statement.setString(7, hero.getType());
 
             statement.executeUpdate();
+            setHeroId(hero);
         }
         catch (SQLException e)
         {
@@ -92,7 +91,7 @@ public class StorageController {
         }
     }
 
-    public ResultSet loadGameData() {
+    ResultSet loadGameData() {
         ResultSet resultSet;
         try {
             String query = "SELECT * FROM " + db + ".hero;";
@@ -104,11 +103,12 @@ public class StorageController {
         return null;
     }
 
-    public static Hero loadHero(ResultSet resultSet, int rowCount) {
+    Hero loadHero(ResultSet resultSet, int rowCount) {
         try {
+            Factory factory = new Factory();
             while (resultSet.next() && rowCount > 1)
                 --rowCount;
-            Hero hero = Factory.newHero(resultSet.getString("type"), resultSet.getString("name"));
+            Hero hero = factory.newHero(resultSet.getString("type"), resultSet.getString("name"));
             hero.setId(resultSet.getInt("id"));
             hero.setXp(resultSet.getInt("xp"));
             hero.setLvl(resultSet.getInt("lvl"));

@@ -17,6 +17,7 @@ public class ConsoleView {
     public static String ANSI_BLUE   = "\u001B[34m";
     public static String ANSI_YELLOW = "\u001B[33m";
     public static String ANSI_RESET = "\u001B[0m";
+    public static String CONS_RESET = "\033[H\033[2J";
 
     public static void printWelcome (){
         System.out.println("Welcome!");

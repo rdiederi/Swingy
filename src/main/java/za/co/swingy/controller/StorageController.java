@@ -11,7 +11,7 @@ public class StorageController {
 
     public StorageController() {
         try {
-            cnx = DriverManager.getConnection("jdbc:mysql://127.0.0.1:", "root", "password");
+            cnx = DriverManager.getConnection("jdbc:mysql://127.0.0.1:", "user", "password");
             stmt = cnx.createStatement();
         } catch (Exception e){
             System.out.println("ERROR: " + "[" + new Exception().getStackTrace()[0].getMethodName() + "]" + " -> " + e.getMessage());

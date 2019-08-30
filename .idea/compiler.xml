@@ -7,8 +7,6 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="swingy" />
-        <module name="swingy_maven" />
-        <module name="roelf" />
       </profile>
     </annotationProcessing>
   </component>

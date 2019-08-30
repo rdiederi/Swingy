@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="36a168e2-0830-417d-884f-cfa8ef05044b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/co/swingy/controller/ConsoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/co/swingy/controller/ConsoleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/co/swingy/controller/Factory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/co/swingy/controller/Factory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/za/co/swingy/controller/ItemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/co/swingy/controller/ItemController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/co/swingy/controller/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/co/swingy/controller/Map.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/co/swingy/controller/StorageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/co/swingy/controller/StorageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/co/swingy/model/items/Armor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/co/swingy/model/items/Armor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/co/swingy/model/items/Helm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/co/swingy/model/items/Helm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/co/swingy/model/items/Weapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/co/swingy/model/items/Weapon.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -145,7 +137,7 @@
       <workItem from="1567051539530" duration="13443000" />
       <workItem from="1567093517493" duration="234000" />
       <workItem from="1567106018198" duration="12334000" />
-      <workItem from="1567138269734" duration="17434000" />
+      <workItem from="1567138269734" duration="17732000" />
     </task>
     <task id="LOCAL-00001" summary="Added Stuff">
       <created>1566886178596</created>
@@ -294,7 +286,14 @@
       <option name="project" value="LOCAL" />
       <updated>1567174187167</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="- Code refactoring&#10;- Hero is now able to pickup items&#10;- items are applied and database immediately updates">
+      <created>1567176838568</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1567176838568</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -359,7 +358,8 @@
     <MESSAGE value="- Code refactoring&#10;- Started implementing Map class&#10;- Improved Error Logging for StorageController" />
     <MESSAGE value="- Code refactoring&#10;- Started implementing Map class&#10;- Now moving Hero through Map" />
     <MESSAGE value="- Code refactoring" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Code refactoring" />
+    <MESSAGE value="- Code refactoring&#10;- Hero is now able to pickup items&#10;- items are applied and database immediately updates" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Code refactoring&#10;- Hero is now able to pickup items&#10;- items are applied and database immediately updates" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>

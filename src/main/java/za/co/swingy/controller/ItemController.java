@@ -13,8 +13,8 @@ public class ItemController {
 
     public ItemController() {
         Random rand = new Random();
-        int randomItemIndex = rand.nextInt(8);
-        String[] itemTypes = {"Weapon", "Armor", "Helm", "Armor", "Helm", "Weapon", "Helm", "Weapon", "Armor"};
+        int randomItemIndex = rand.nextInt(11);
+        String[] itemTypes = {"Weapon", "Armor", "Helm", "Armor", "Helm", "Weapon", "Helm", "Weapon", "Armor", "Armor", "Helm", "Weapon"};
         itemType = itemTypes[randomItemIndex];
     }
 

@@ -14,7 +14,7 @@ public class StorageController {
             cnx = DriverManager.getConnection("jdbc:mysql://127.0.0.1:", "root", "password");
             stmt = cnx.createStatement();
         } catch (Exception e){
-            System.out.println("[ERROR] " + e.getMessage());
+            System.out.println("ERROR: " + "[" + new Exception().getStackTrace()[0].getMethodName() + "]" + " -> " + e.getMessage());
         }
     }
 
@@ -25,7 +25,7 @@ public class StorageController {
             stm.executeUpdate(query);
         } catch (SQLException e)
         {
-            System.out.println("[ERROR] " + e.getMessage());
+            System.out.println("ERROR: " + "[" + new Exception().getStackTrace()[0].getMethodName() + "]" + " -> " + e.getMessage());
         }
         return (this);
     }
@@ -45,7 +45,7 @@ public class StorageController {
         try{
             stmt.executeUpdate(createTable);
         }catch(SQLException e){
-            System.out.println("[ERROR] " + e.getMessage());
+            System.out.println("ERROR: " + "[" + new Exception().getStackTrace()[0].getMethodName() + "]" + " -> " + e.getMessage());
         }
         return (this);
     }
@@ -65,7 +65,7 @@ public class StorageController {
 
             hero.setId(id);
         } catch (SQLException e) {
-            System.out.println("ERROR: " + "[" + new Exception().getStackTrace()[0].getMethodName() + "]" + " ->" + e.getMessage());
+            System.out.println("ERROR: " + "[" + new Exception().getStackTrace()[0].getMethodName() + "]" + " -> " + e.getMessage());
         }
     }
 
@@ -88,7 +88,7 @@ public class StorageController {
         }
         catch (SQLException e)
         {
-            System.out.println("ERROR: " + "[" + new Exception().getStackTrace()[0].getMethodName() + "]" + " ->" + e.getMessage());
+            System.out.println("ERROR: " + "[" + new Exception().getStackTrace()[0].getMethodName() + "]" + " -> " + e.getMessage());
         }
     }
 
@@ -99,7 +99,7 @@ public class StorageController {
             resultSet = stmt.executeQuery(query);
             return resultSet;
         } catch (SQLException e) {
-            System.out.println("ERROR: " + "[" + new Exception().getStackTrace()[0].getMethodName() + "]" + " ->" + e.getMessage());
+            System.out.println("ERROR: " + "[" + new Exception().getStackTrace()[0].getMethodName() + "]" + " -> " + e.getMessage());
         }
         return null;
     }
@@ -118,7 +118,7 @@ public class StorageController {
 
             return hero;
         } catch (SQLException e){
-            System.out.println("ERROR: " + "[" + new Exception().getStackTrace()[0].getMethodName() + "]" + " ->" + e.getMessage());
+            System.out.println("ERROR: " + "[" + new Exception().getStackTrace()[0].getMethodName() + "]" + " -> " + e.getMessage());
         }
         return null;
     }

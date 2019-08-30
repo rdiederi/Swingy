@@ -147,6 +147,8 @@ public class ConsoleController {
 
     public static void gameLoop() throws IOException, SQLException {
        Hero hero;
+       Factory factory = new Factory();
+       Map map;
        StorageController sc = new StorageController();
        sc.createDB();
        sc.createTB();
@@ -160,7 +162,8 @@ public class ConsoleController {
                 case 1:
                    hero = createHero(sc);
 //                    startGame(hero);
-
+                    map = factory.newMap(hero);
+                    ConsoleView.drawMap(map.getDimension(), map.getMap());
 
                     break;
                 case 2:

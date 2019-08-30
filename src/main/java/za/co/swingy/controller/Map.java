@@ -24,6 +24,10 @@ public class Map {
         return map;
     }
 
+    public int getDimension(){
+        return dimension;
+    }
+
     public static int getMapDimensions(int level)
     {
         if (level < 1) {

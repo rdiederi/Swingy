@@ -9,6 +9,8 @@ public class Map {
     private String[][] map;
     private int middle;
     private int dimension;
+    private int y;
+    private int x;
 
     public Map(){}
 
@@ -18,6 +20,9 @@ public class Map {
         dimension = getMapDimensions(level);
         middle = getMiddleOfMap(dimension);
         map = generateMap(dimension, middle);
+
+        hero.setY(middle);
+        hero.setX(middle);
     }
 
     public String[][] getMap() {
@@ -39,6 +44,14 @@ public class Map {
 
     private int getMiddleOfMap(int dimension) {
         return ((dimension - 1) / 2);
+    }
+
+    public boolean edgeOfMap(Hero hero) {
+        y = hero.getY();
+        x = hero.getX();
+        if (y == 0 || x == 0 || y == map.length - 1 || x == map[y].length - 1)
+            return (true);
+        return (false);
     }
 
     public static boolean inArray(int array[][], int vals[])
@@ -111,7 +124,6 @@ public class Map {
     }
 
         public void newMap(Hero hero) {
-        String[][] map = new String[0][];
         dimension = Map.getMapDimensions(hero.getLvl());
         middle = getMiddleOfMap(dimension);
         map = Map.generateMap(dimension, middle);

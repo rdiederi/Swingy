@@ -6,6 +6,7 @@ import za.co.swingy.view.ConsoleView;
 
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class ConsoleController {
@@ -54,24 +55,20 @@ public class ConsoleController {
         return true;
     }
 
-    private static void moveUp(int y)
-    {
-        y--;
+    private static void moveUp(Hero hero) {
+        hero.setY(hero.getY() - 1);
     }
 
-    private static void moveDown(int y)
-    {
-        y++;
+    private static void moveDown(Hero hero) {
+        hero.setY(hero.getY() + 1);
     }
 
-    private static void moveLeft(int x)
-    {
-        x--;
+    private static void moveLeft(Hero hero) {
+        hero.setX(hero.getX() - 1);
     }
 
-    private static void moveRight(int x)
-    {
-        x++;
+    private static void moveRight(Hero hero) {
+        hero.setX(hero.getX() + 1);
     }
 
 //    public static boolean isEnemy() {
@@ -89,66 +86,81 @@ public class ConsoleController {
 //    }
 
 
-//    public  static void moveHero(String direction, String[][] map)
-//    {
-//        String[] directions = new String[]{"n", "s", "e", "w"};
-//        boolean result = Arrays.stream(directions).anyMatch(direction::equals);
-//
-//
-//        if (result) {
-//            map[y][x] = ".";
-//            if (!edgeOfMap()) {
-//                if (direction.equals("n")) {
-//                    moveUp();
-//                    if(isItem()) {
-//                        applyItem(item);
-//                    } else if (isEnemy()) {
-//                        // Fight or flight
-//                    }
-//                }
-//                else if (direction.equals("s")) {
-//                    moveDown();
-//                    if(isItem()) {
-//                        item = new DropItems(level).getItem();
-//                        applyItem(item);
-//                    } else if (isEnemy()) {
-//                        // Fight or flight
-//                    }
-//                }
-//                else if (direction.equals("e")) {
-//                    moveRight();
-//                    if(isItem()) {
-//                        item = new DropItems(level).getItem();
-//                        applyItem(item);
-//                    } else if (isEnemy()) {
-//                        // Fight or flight
-//                    }
-//                }
-//                else if (direction.equals("w")) {
-//                    moveLeft();
-//                    if(isItem()) {
-//                        item = new DropItems(level).getItem();
-//                        applyItem(item);
-//                    } else if (isEnemy()) {
-//                        // Fight or flight
-//                    }
-//                }
-//                map[y][x] = "1";
-//            }
-//            else {
-//                newMap();
-//            }
-//        }
-//    }
+    public  static void moveHero(String direction, Map mapObj, Hero hero)
+    {
+        String[] directions = new String[]{"n", "s", "e", "w"};
+        boolean result = Arrays.stream(directions).anyMatch(direction::equals);
+        String[][] map = mapObj.getMap();
 
-    public static void startGame(Hero hero, String[][] map) throws SQLException {
-        ConsoleView.printHeroStats(hero);
+
+        if (result) {
+            map[hero.getY()][hero.getX()] = ".";
+            if (!mapObj.edgeOfMap(hero)) {
+                if (direction.equals("n")) {
+                    moveUp(hero);
+//                    if(isItem()) {
+//                        applyItem(item);
+//                    } else if (isEnemy()) {
+//                        // Fight or flight
+//                    }
+                }
+                else if (direction.equals("s")) {
+                    moveDown(hero);
+//                    if(isItem()) {
+//                        item = new DropItems(level).getItem();
+//                        applyItem(item);
+//                    } else if (isEnemy()) {
+//                        // Fight or flight
+//                    }
+                }
+                else if (direction.equals("e")) {
+                    moveRight(hero);
+//                    if(isItem()) {
+//                        item = new DropItems(level).getItem();
+//                        applyItem(item);
+//                    } else if (isEnemy()) {
+//                        // Fight or flight
+//                    }
+                }
+                else if (direction.equals("w")) {
+                    moveLeft(hero);
+//                    if(isItem()) {
+//                        item = new DropItems(level).getItem();
+//                        applyItem(item);
+//                    } else if (isEnemy()) {
+//                        // Fight or flight
+//                    }
+                }
+                map[hero.getY()][hero.getX()] = "1";
+            }
+            else {
+                mapObj.newMap(hero);
+            }
+        }
+    }
+
+    public static void startGame(Hero hero, Scanner input) throws SQLException {
+        Factory factory = new Factory();
+        Map map;
+        map = factory.newMap(hero);
+        String move;
+
+        while(true)
+        {
+
+            ConsoleView.printHeroStats(hero);
+            ConsoleView.drawMap(map.getDimension(), map.getMap());
+            System.out.println("North (n)|South (s)|East (e)|West (w)");
+            move = input.next();
+
+            moveHero(move, map, hero);
+            System.out.println(hero.getX() + " " + hero.getY());
+//            clearConsole();
+        }
     }
 
     public static void gameLoop() throws IOException, SQLException {
        Hero hero;
-       Factory factory = new Factory();
-       Map map;
        StorageController sc = new StorageController();
        sc.createDB();
        sc.createTB();
@@ -161,9 +173,8 @@ public class ConsoleController {
             switch (cmd){
                 case 1:
                    hero = createHero(sc);
-//                    startGame(hero);
-                    map = factory.newMap(hero);
-                    ConsoleView.drawMap(map.getDimension(), map.getMap());
+                    startGame(hero, input);
+//                    hero.setLvl(7);
 
                     break;
                 case 2:

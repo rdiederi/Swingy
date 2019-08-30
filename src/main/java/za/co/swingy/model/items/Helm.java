@@ -1,11 +1,13 @@
 package za.co.swingy.model.items;
 
+import za.co.swingy.controller.StorageController;
 import za.co.swingy.model.Hero;
 import za.co.swingy.model.Item;
 
 public class Helm implements Item {
     private String name;
     private int stat;
+    StorageController sc = new StorageController();
 
     public Helm() {
         name = "Helm";
@@ -27,8 +29,9 @@ public class Helm implements Item {
 
 
     @Override
-    public Item applyItem(Hero hero) {
+    public void applyItem(Hero hero) {
         hero.setHp(hero.getHp() + getStat());
-        return null;
+        sc.updateStats(hero);
+        System.out.println("|Item found! Hero picks up -> " + name + ": +" + stat + "|");
     }
 }

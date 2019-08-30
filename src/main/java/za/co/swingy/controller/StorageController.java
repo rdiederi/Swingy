@@ -103,7 +103,7 @@ public class StorageController {
         return null;
     }
 
-    Hero loadHero(ResultSet resultSet, int rowCount) {
+    static Hero loadHero(ResultSet resultSet, int rowCount) {
         try {
             Factory factory = new Factory();
             while (resultSet.next() && rowCount > 1)

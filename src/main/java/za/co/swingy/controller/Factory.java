@@ -20,7 +20,10 @@ class Factory {
     }
 
     Item newItem() {
-        return ItemController.dropItem();
+        ItemController ic = new ItemController();
+        Item item;
+        item = ic.dropItem();
+        return item;
     }
 
     static Map newMap(Hero hero) {

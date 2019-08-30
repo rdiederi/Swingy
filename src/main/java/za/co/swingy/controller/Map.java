@@ -131,19 +131,23 @@ public class Map {
         hero.setY(middle);
     }
 
-    private static void moveUp(Hero hero) {
+    private void moveUp(Hero hero) {
+        y--;
         hero.setY(hero.getY() - 1);
     }
 
-    private static void moveDown(Hero hero) {
+    private void moveDown(Hero hero) {
+        y++;
         hero.setY(hero.getY() + 1);
     }
 
-    private static void moveLeft(Hero hero) {
+    private void moveLeft(Hero hero) {
+        x--;
         hero.setX(hero.getX() - 1);
     }
 
-    private static void moveRight(Hero hero) {
+    private void moveRight(Hero hero) {
+        x++;
         hero.setX(hero.getX() + 1);
     }
 

@@ -8,18 +8,17 @@ import za.co.swingy.model.items.Weapon;
 import java.util.Random;
 
 public class ItemController {
-    private String itemTypes[] = {"Weapon", "Armor", "Helm"};
-    private int randomItemIndex;
-    private static String itemType;
-    private static Item item;
+    private String itemType;
+    private Item item;
 
     public ItemController() {
         Random rand = new Random();
-        randomItemIndex = rand.nextInt(2);
+        int randomItemIndex = rand.nextInt(8);
+        String[] itemTypes = {"Weapon", "Armor", "Helm", "Armor", "Helm", "Weapon", "Helm", "Weapon", "Armor"};
         itemType = itemTypes[randomItemIndex];
     }
 
-    public static Item dropItem() {
+    Item dropItem() {
         if (itemType.equalsIgnoreCase("weapon")) {
             item = new Weapon();
         } else if (itemType.equalsIgnoreCase("armor")) {

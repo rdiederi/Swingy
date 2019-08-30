@@ -32,5 +32,6 @@ public class Armor implements Item {
     public void applyItem(Hero hero) {
         hero.setDefense(hero.getDefense() + getStat());
         sc.updateStats(hero);
+        System.out.println("|Item found! Hero picks up -> " + name + ": +" + stat + "|");
     }
 }

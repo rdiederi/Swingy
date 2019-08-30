@@ -54,7 +54,6 @@ public class ConsoleController {
 
         while(true)
         {
-
             ConsoleView.printHeroStats(hero);
             ConsoleView.drawMap(map.getDimension(), map.getMap());
             System.out.println("North (n)|South (s)|East (e)|West (w)");

@@ -6,7 +6,6 @@ import za.co.swingy.view.ConsoleView;
 
 import java.io.IOException;
 import java.sql.SQLException;
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class ConsoleController {
@@ -55,22 +54,6 @@ public class ConsoleController {
         return true;
     }
 
-    private static void moveUp(Hero hero) {
-        hero.setY(hero.getY() - 1);
-    }
-
-    private static void moveDown(Hero hero) {
-        hero.setY(hero.getY() + 1);
-    }
-
-    private static void moveLeft(Hero hero) {
-        hero.setX(hero.getX() - 1);
-    }
-
-    private static void moveRight(Hero hero) {
-        hero.setX(hero.getX() + 1);
-    }
-
 //    public static boolean isEnemy() {
 //        if ("X".equalsIgnoreCase(map[y][x])) {
 //            return (true);
@@ -86,59 +69,6 @@ public class ConsoleController {
 //    }
 
 
-    public  static void moveHero(String direction, Map mapObj, Hero hero)
-    {
-        String[] directions = new String[]{"n", "s", "e", "w"};
-        boolean result = Arrays.stream(directions).anyMatch(direction::equals);
-        String[][] map = mapObj.getMap();
-
-
-        if (result) {
-            map[hero.getY()][hero.getX()] = ".";
-            if (!mapObj.edgeOfMap(hero)) {
-                if (direction.equals("n")) {
-                    moveUp(hero);
-//                    if(isItem()) {
-//                        applyItem(item);
-//                    } else if (isEnemy()) {
-//                        // Fight or flight
-//                    }
-                }
-                else if (direction.equals("s")) {
-                    moveDown(hero);
-//                    if(isItem()) {
-//                        item = new DropItems(level).getItem();
-//                        applyItem(item);
-//                    } else if (isEnemy()) {
-//                        // Fight or flight
-//                    }
-                }
-                else if (direction.equals("e")) {
-                    moveRight(hero);
-//                    if(isItem()) {
-//                        item = new DropItems(level).getItem();
-//                        applyItem(item);
-//                    } else if (isEnemy()) {
-//                        // Fight or flight
-//                    }
-                }
-                else if (direction.equals("w")) {
-                    moveLeft(hero);
-//                    if(isItem()) {
-//                        item = new DropItems(level).getItem();
-//                        applyItem(item);
-//                    } else if (isEnemy()) {
-//                        // Fight or flight
-//                    }
-                }
-                map[hero.getY()][hero.getX()] = "1";
-            }
-            else {
-                mapObj.newMap(hero);
-            }
-        }
-    }
-
     public static void startGame(Hero hero, Scanner input) throws SQLException {
         Factory factory = new Factory();
         Map map;
@@ -153,7 +83,7 @@ public class ConsoleController {
             System.out.println("North (n)|South (s)|East (e)|West (w)");
             move = input.next();
 
-            moveHero(move, map, hero);
+            map.moveHero(move, map, hero);
             System.out.println(hero.getX() + " " + hero.getY());
 //            clearConsole();
         }

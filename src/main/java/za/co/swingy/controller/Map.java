@@ -2,6 +2,7 @@ package za.co.swingy.controller;
 
 import za.co.swingy.model.Hero;
 
+import java.util.Arrays;
 import java.util.Random;
 
 public class Map {
@@ -129,5 +130,74 @@ public class Map {
         map = Map.generateMap(dimension, middle);
         hero.setX(middle);
         hero.setY(middle);
+    }
+
+    private static void moveUp(Hero hero) {
+        hero.setY(hero.getY() - 1);
+    }
+
+    private static void moveDown(Hero hero) {
+        hero.setY(hero.getY() + 1);
+    }
+
+    private static void moveLeft(Hero hero) {
+        hero.setX(hero.getX() - 1);
+    }
+
+    private static void moveRight(Hero hero) {
+        hero.setX(hero.getX() + 1);
+    }
+
+    public  static void moveHero(String direction, Map mapObj, Hero hero)
+    {
+        String[] directions = new String[]{"n", "s", "e", "w"};
+        boolean result = Arrays.stream(directions).anyMatch(direction::equals);
+        String[][] map = mapObj.getMap();
+
+
+        if (result) {
+            map[hero.getY()][hero.getX()] = ".";
+            if (!mapObj.edgeOfMap(hero)) {
+                if (direction.equals("n")) {
+                    moveUp(hero);
+//                    if(isItem()) {
+//                        applyItem(item);
+//                    } else if (isEnemy()) {
+//                        // Fight or flight
+//                    }
+                }
+                else if (direction.equals("s")) {
+                    moveDown(hero);
+//                    if(isItem()) {
+//                        item = new DropItems(level).getItem();
+//                        applyItem(item);
+//                    } else if (isEnemy()) {
+//                        // Fight or flight
+//                    }
+                }
+                else if (direction.equals("e")) {
+                    moveRight(hero);
+//                    if(isItem()) {
+//                        item = new DropItems(level).getItem();
+//                        applyItem(item);
+//                    } else if (isEnemy()) {
+//                        // Fight or flight
+//                    }
+                }
+                else if (direction.equals("w")) {
+                    moveLeft(hero);
+//                    if(isItem()) {
+//                        item = new DropItems(level).getItem();
+//                        applyItem(item);
+//                    } else if (isEnemy()) {
+//                        // Fight or flight
+//                    }
+                }
+                map[hero.getY()][hero.getX()] = "1";
+            }
+            else {
+                mapObj.newMap(hero);
+            }
+        }
     }
 }

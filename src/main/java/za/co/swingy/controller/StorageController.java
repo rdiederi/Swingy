@@ -139,7 +139,7 @@ public class StorageController {
 
             statement.executeUpdate();
         } catch (SQLException e) {
-            System.out.println("[ERROR] " + e.getMessage());
+            System.out.println("ERROR: " + "[" + new Exception().getStackTrace()[0].getMethodName() + "]" + " -> " + e.getMessage());
         }
     }
 }

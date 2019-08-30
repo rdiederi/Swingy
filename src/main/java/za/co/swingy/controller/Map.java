@@ -15,7 +15,7 @@ public class Map {
 
     public Map(){}
 
-    public Map(Hero hero) {
+    Map(Hero hero) {
         int level = hero.getLvl();
 
         dimension = getMapDimensions(level);
@@ -26,28 +26,27 @@ public class Map {
         hero.setX(middle);
     }
 
-    public String[][] getMap() {
+    String[][] getMap() {
         return map;
     }
 
-    public int getDimension(){
+    int getDimension(){
         return dimension;
     }
 
-    public static int getMapDimensions(int level)
+    private static int getMapDimensions(int level)
     {
         if (level < 1) {
             level = 1;
         }
-        int dimension = (level - 1) * 5 + 10 - (level % 2);
-        return  (dimension);
+        return  ((level - 1) * 5 + 10 - (level % 2));
     }
 
     private int getMiddleOfMap(int dimension) {
         return ((dimension - 1) / 2);
     }
 
-    public boolean edgeOfMap(Hero hero) {
+    private boolean edgeOfMap(Hero hero) {
         y = hero.getY();
         x = hero.getX();
         if (y == 0 || x == 0 || y == map.length - 1 || x == map[y].length - 1)
@@ -55,7 +54,7 @@ public class Map {
         return (false);
     }
 
-    public static boolean inArray(int array[][], int vals[])
+    private static boolean inArray(int[][] array, int[] vals)
     {
         for (int x = 0; x < array.length; x++)
         {
@@ -65,18 +64,18 @@ public class Map {
         return (false);
     }
 
-    public static String[][] generateMap(int dimension, int middle)
+    private static String[][] generateMap(int dimension, int middle)
     {
-        String newMap[][] = new String[dimension][dimension];
-        int numOfVillans = Math.round(((dimension * dimension) * 50) / 100);
-        int villansCoordinates[][] = new int[numOfVillans][2];
+        String[][] newMap = new String[dimension][dimension];
+        int numOfVillans = Math.round(((dimension * dimension) * 5) / 100);
+        int[][] villansCoordinates = new int[numOfVillans][2];
         int numOfItems = Math.round(((dimension * dimension) * 6) / 100);
-        int itemsCoordinates[][] = new int[numOfItems][2];
+        int[][] itemsCoordinates = new int[numOfItems][2];
 
 
         for (int i = 0; i < numOfVillans; i++)
         {
-            int position[] = generatePosition(dimension);
+            int[] position = generatePosition(dimension);
             if (position[1] != middle && !inArray(villansCoordinates, position))
                 villansCoordinates[i] = position;
             else
@@ -85,7 +84,7 @@ public class Map {
 
         for (int i = 0; i < numOfItems; i++)
         {
-            int position[] = generatePosition(dimension);
+            int[] position = generatePosition(dimension);
             if (position[1] != middle && !inArray(itemsCoordinates, position) && !inArray(villansCoordinates, position))
                 itemsCoordinates[i] = position;
             else
@@ -96,7 +95,7 @@ public class Map {
         {
             for (int x = 0; x < dimension; x++)
             {
-                int tmp[] = {y,x};
+                int[] tmp = {y,x};
                 if (inArray(villansCoordinates, tmp))
                     newMap[y][x] = "X";
                 else if (inArray(itemsCoordinates, tmp))
@@ -111,10 +110,10 @@ public class Map {
     }
 
 
-    public static int []generatePosition(int dimension)
+    private static int []generatePosition(int dimension)
     {
         Random rand = new Random();
-        int pos[] = new int[2];
+        int[] pos = new int[2];
         int x = rand.nextInt(dimension);
         int y = rand.nextInt(dimension);
 
@@ -124,7 +123,7 @@ public class Map {
         return (pos);
     }
 
-        public void newMap(Hero hero) {
+    private void newMap(Hero hero) {
         dimension = Map.getMapDimensions(hero.getLvl());
         middle = getMiddleOfMap(dimension);
         map = Map.generateMap(dimension, middle);
@@ -148,50 +147,63 @@ public class Map {
         hero.setX(hero.getX() + 1);
     }
 
-    public  static void moveHero(String direction, Map mapObj, Hero hero)
+    //    public static boolean isEnemy() {
+//        if ("X".equalsIgnoreCase(map[y][x])) {
+//            return (true);
+//        }
+//        return (false);
+//    }
+
+    public boolean isItem() {
+        return "C".equalsIgnoreCase(map[y][x]);
+    }
+
+    static void moveHero(String direction, Map mapObj, Hero hero)
     {
         String[] directions = new String[]{"n", "s", "e", "w"};
-        boolean result = Arrays.stream(directions).anyMatch(direction::equals);
+        boolean result = Arrays.asList(directions).contains(direction);
         String[][] map = mapObj.getMap();
 
 
         if (result) {
             map[hero.getY()][hero.getX()] = ".";
             if (!mapObj.edgeOfMap(hero)) {
-                if (direction.equals("n")) {
-                    moveUp(hero);
+                switch (direction) {
+                    case "n":
+                        moveUp(hero);
 //                    if(isItem()) {
 //                        applyItem(item);
 //                    } else if (isEnemy()) {
 //                        // Fight or flight
 //                    }
-                }
-                else if (direction.equals("s")) {
-                    moveDown(hero);
-//                    if(isItem()) {
-//                        item = new DropItems(level).getItem();
-//                        applyItem(item);
-//                    } else if (isEnemy()) {
-//                        // Fight or flight
-//                    }
-                }
-                else if (direction.equals("e")) {
-                    moveRight(hero);
+                        break;
+                    case "s":
+                        moveDown(hero);
 //                    if(isItem()) {
 //                        item = new DropItems(level).getItem();
 //                        applyItem(item);
 //                    } else if (isEnemy()) {
 //                        // Fight or flight
 //                    }
-                }
-                else if (direction.equals("w")) {
-                    moveLeft(hero);
+                        break;
+                    case "e":
+                        moveRight(hero);
 //                    if(isItem()) {
 //                        item = new DropItems(level).getItem();
 //                        applyItem(item);
 //                    } else if (isEnemy()) {
 //                        // Fight or flight
 //                    }
+                        break;
+                    case "w":
+                        moveLeft(hero);
+//                    if(isItem()) {
+//                        item = new DropItems(level).getItem();
+//                        applyItem(item);
+//                    } else if (isEnemy()) {
+//                        // Fight or flight
+//                    }
+                        break;
                 }
                 map[hero.getY()][hero.getX()] = "1";
             }

@@ -47,28 +47,6 @@ public class ConsoleController {
     }
 
 
-    public static boolean isEmpty(int x, int y, int map[][])
-    {
-        if (map[x][y] != 0)
-            return (false);
-        return true;
-    }
-
-//    public static boolean isEnemy() {
-//        if ("X".equalsIgnoreCase(map[y][x])) {
-//            return (true);
-//        }
-//        return (false);
-//    }
-
-//    public static boolean isItem() {
-//        if ("C".equalsIgnoreCase(map[y][x])) {
-//            return (true);
-//        }
-//        return (false);
-//    }
-
-
     public static void startGame(Hero hero, Scanner input) throws SQLException {
         Factory factory = new Factory();
         Map map;

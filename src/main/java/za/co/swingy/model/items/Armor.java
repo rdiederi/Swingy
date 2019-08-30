@@ -1,11 +1,13 @@
 package za.co.swingy.model.items;
 
+import za.co.swingy.controller.StorageController;
 import za.co.swingy.model.Hero;
 import za.co.swingy.model.Item;
 
 public class Armor implements Item {
     private String name;
     private int stat;
+    StorageController sc = new StorageController();
 
     public Armor() {
         name = "Armor";
@@ -21,7 +23,7 @@ public class Armor implements Item {
         return name;
     }
 
-    public int getStat() {
+    private int getStat() {
         return stat;
     }
 
@@ -29,5 +31,6 @@ public class Armor implements Item {
     @Override
     public void applyItem(Hero hero) {
         hero.setDefense(hero.getDefense() + getStat());
+        sc.updateStats(hero);
     }
 }

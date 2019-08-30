@@ -123,7 +123,7 @@ public class StorageController {
         return null;
     }
 
-    public static void updateStats(Hero hero) {
+    public void updateStats(Hero hero) {
         try {
             String query = "UPDATE " + db + ".hero " +
                     "SET attack = ?, defense = ?, hp = ?, lvl = ?, xp = ? " +

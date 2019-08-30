@@ -67,9 +67,9 @@ public class Map {
     private static String[][] generateMap(int dimension, int middle)
     {
         String[][] newMap = new String[dimension][dimension];
-        int numOfVillans = Math.round(((dimension * dimension) * 5) / 100);
+        int numOfVillans = Math.round(((dimension * dimension) * 50) / 100);
         int[][] villansCoordinates = new int[numOfVillans][2];
-        int numOfItems = Math.round(((dimension * dimension) * 6) / 100);
+        int numOfItems = Math.round(((dimension * dimension) * 12) / 100);
         int[][] itemsCoordinates = new int[numOfItems][2];
 
 
@@ -147,22 +147,20 @@ public class Map {
         hero.setX(hero.getX() + 1);
     }
 
-    //    public static boolean isEnemy() {
-//        if ("X".equalsIgnoreCase(map[y][x])) {
-//            return (true);
-//        }
-//        return (false);
-//    }
+        private boolean isEnemy() {
+            return "X".equalsIgnoreCase(map[y][x]);
+        }
 
     public boolean isItem() {
         return "C".equalsIgnoreCase(map[y][x]);
     }
 
-    static void moveHero(String direction, Map mapObj, Hero hero)
+    void moveHero(String direction, Map mapObj, Hero hero)
     {
         String[] directions = new String[]{"n", "s", "e", "w"};
         boolean result = Arrays.asList(directions).contains(direction);
         String[][] map = mapObj.getMap();
+        Factory factory = new Factory();
 
 
         if (result) {
@@ -171,38 +169,35 @@ public class Map {
                 switch (direction) {
                     case "n":
                         moveUp(hero);
-//                    if(isItem()) {
-//                        applyItem(item);
-//                    } else if (isEnemy()) {
-//                        // Fight or flight
-//                    }
+                    if(isItem()) {
+                        factory.newItem().applyItem(hero);
+                    } else if (isEnemy()) {
+                        // Fight or flight
+                    }
                         break;
                     case "s":
                         moveDown(hero);
-//                    if(isItem()) {
-//                        item = new DropItems(level).getItem();
-//                        applyItem(item);
-//                    } else if (isEnemy()) {
-//                        // Fight or flight
-//                    }
+                    if(isItem()) {
+                        factory.newItem().applyItem(hero);
+                    } else if (isEnemy()) {
+                        // Fight or flight
+                    }
                         break;
                     case "e":
                         moveRight(hero);
-//                    if(isItem()) {
-//                        item = new DropItems(level).getItem();
-//                        applyItem(item);
-//                    } else if (isEnemy()) {
-//                        // Fight or flight
-//                    }
+                    if(isItem()) {
+                        factory.newItem().applyItem(hero);
+                    } else if (isEnemy()) {
+                        // Fight or flight
+                    }
                         break;
                     case "w":
                         moveLeft(hero);
-//                    if(isItem()) {
-//                        item = new DropItems(level).getItem();
-//                        applyItem(item);
-//                    } else if (isEnemy()) {
-//                        // Fight or flight
-//                    }
+                    if(isItem()) {
+                        factory.newItem().applyItem(hero);
+                    } else if (isEnemy()) {
+                        // Fight or flight
+                    }
                         break;
                 }
                 map[hero.getY()][hero.getX()] = "1";

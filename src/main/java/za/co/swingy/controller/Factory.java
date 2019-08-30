@@ -6,8 +6,8 @@ import za.co.swingy.model.characters.DeathNight;
 import za.co.swingy.model.characters.Druid;
 import za.co.swingy.model.characters.Hunter;
 
-public class Factory {
-    public static Hero newHero (String heroClass, String name) {
+class Factory {
+    Hero newHero(String heroClass, String name) {
 
         if (heroClass.equalsIgnoreCase("hunter")) {
             return new Hunter(name);
@@ -19,12 +19,11 @@ public class Factory {
         return null;
     }
 
-    public static Item newItem() {
-        Item item = ItemController.dropItem();
-        return item;
+    Item newItem() {
+        return ItemController.dropItem();
     }
 
-    public static Map newMap(Hero hero) {
+    static Map newMap(Hero hero) {
         return new Map(hero);
     }
 }

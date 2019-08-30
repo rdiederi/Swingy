@@ -27,7 +27,8 @@ public class Helm implements Item {
 
 
     @Override
-    public void applyItem(Hero hero) {
+    public Item applyItem(Hero hero) {
         hero.setHp(hero.getHp() + getStat());
+        return null;
     }
 }

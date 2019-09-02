@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="36a168e2-0830-417d-884f-cfa8ef05044b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/co/swingy/controller/ItemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/co/swingy/controller/ItemController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/co/swingy/model/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/co/swingy/model/Hero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/co/swingy/model/characters/DeathNight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/co/swingy/model/characters/DeathNight.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/co/swingy/model/characters/Druid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/co/swingy/model/characters/Druid.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/co/swingy/model/characters/Hunter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/co/swingy/model/characters/Hunter.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -137,7 +141,8 @@
       <workItem from="1567051539530" duration="13443000" />
       <workItem from="1567093517493" duration="234000" />
       <workItem from="1567106018198" duration="12334000" />
-      <workItem from="1567138269734" duration="17732000" />
+      <workItem from="1567138269734" duration="18293000" />
+      <workItem from="1567429039924" duration="472000" />
     </task>
     <task id="LOCAL-00001" summary="Added Stuff">
       <created>1566886178596</created>
@@ -293,7 +298,14 @@
       <option name="project" value="LOCAL" />
       <updated>1567176838568</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="- Attempted to make item drops more random but dropped more evenly">
+      <created>1567176978516</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1567176978516</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -359,7 +371,8 @@
     <MESSAGE value="- Code refactoring&#10;- Started implementing Map class&#10;- Now moving Hero through Map" />
     <MESSAGE value="- Code refactoring" />
     <MESSAGE value="- Code refactoring&#10;- Hero is now able to pickup items&#10;- items are applied and database immediately updates" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Code refactoring&#10;- Hero is now able to pickup items&#10;- items are applied and database immediately updates" />
+    <MESSAGE value="- Attempted to make item drops more random but dropped more evenly" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Attempted to make item drops more random but dropped more evenly" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>

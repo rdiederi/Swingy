@@ -6,8 +6,8 @@ public abstract class Hero{
     public int attack;
     public int defense;
     public int hp;
-    public int xp;
-    public int lvl;
+    public int xp = 0;
+    public int lvl = 1;
     public int y,x;
     public String name;
     public String type = new StringBuilder(String.valueOf(this.getClass())).delete(0, 36).toString();
@@ -57,4 +57,8 @@ public abstract class Hero{
     public abstract void setX(int x);
 
     public abstract String getType();
+
+    public abstract void levelUp();
+
+
 }

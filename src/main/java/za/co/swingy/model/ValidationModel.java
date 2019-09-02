@@ -54,7 +54,6 @@ public class ValidationModel {
         Validator validator = factory.getValidator();
         ValidationModel user;
         if (cmd == 0) {
-            System.out.println("cmd was set to 0");
             user = new ValidationModel(string, class_);
         } else {
             user = new ValidationModel(cmd, class_);

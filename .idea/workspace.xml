@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="36a168e2-0830-417d-884f-cfa8ef05044b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin" beforeDir="false" afterPath="$PROJECT_DIR$/bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/src/main/java/za/co/swingy/App.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/src/main/java/za/co/swingy/controller/ConsoleController.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/src/main/java/za/co/swingy/controller/Factory.java" beforeDir="false" />
@@ -21,8 +20,11 @@
       <change beforePath="$PROJECT_DIR$/bin/src/main/java/za/co/swingy/model/items/Weapon.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/src/main/java/za/co/swingy/view/ConsoleView.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/za/co/swingy/controller/ConsoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/co/swingy/controller/ConsoleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/co/swingy/controller/Factory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/co/swingy/controller/Factory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/co/swingy/controller/StorageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/co/swingy/controller/StorageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/co/swingy/view/ConsoleView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/co/swingy/view/ConsoleView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/za/co/swingy/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/za/co/swingy/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/za/co/swingy/controller/ConsoleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/za/co/swingy/controller/ConsoleController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/za/co/swingy/model/ValidationModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/za/co/swingy/model/ValidationModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/za/co/swingy/view/ConsoleView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/za/co/swingy/view/ConsoleView.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -163,7 +165,7 @@
       <workItem from="1567344883196" duration="1414000" />
       <workItem from="1567407257962" duration="919000" />
       <workItem from="1567423510347" duration="6740000" />
-      <workItem from="1567447308325" duration="1067000" />
+      <workItem from="1567447308325" duration="4405000" />
     </task>
     <task id="LOCAL-00001" summary="Added Stuff">
       <created>1566886178596</created>

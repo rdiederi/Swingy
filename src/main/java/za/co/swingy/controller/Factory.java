@@ -10,6 +10,7 @@ class Factory {
     Hero newHero(String heroClass, String name) {
 
         if (heroClass.equalsIgnoreCase("hunter")) {
+            System.out.println(name);
             return new Hunter(name);
         } else if (heroClass.equalsIgnoreCase("deathnight")) {
             return new DeathNight(name);

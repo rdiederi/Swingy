@@ -2,11 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="36a168e2-0830-417d-884f-cfa8ef05044b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/co/swingy/model/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/co/swingy/model/Hero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/co/swingy/model/characters/DeathNight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/co/swingy/model/characters/DeathNight.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/co/swingy/model/characters/Druid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/co/swingy/model/characters/Druid.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/co/swingy/model/characters/Hunter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/co/swingy/model/characters/Hunter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/za/co/swingy/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/za/co/swingy/controller/ConsoleController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/za/co/swingy/controller/Factory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/za/co/swingy/controller/ItemController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/za/co/swingy/controller/Map.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/za/co/swingy/controller/StorageController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/za/co/swingy/model/Hero.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/za/co/swingy/model/Item.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/za/co/swingy/model/characters/DeathNight.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/za/co/swingy/model/characters/Druid.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/za/co/swingy/model/characters/Hunter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/za/co/swingy/model/items/Armor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/za/co/swingy/model/items/Helm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/za/co/swingy/model/items/Weapon.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/za/co/swingy/view/ConsoleView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/co/swingy/controller/ConsoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/co/swingy/controller/ConsoleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/co/swingy/controller/Factory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/co/swingy/controller/Factory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/co/swingy/controller/StorageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/co/swingy/controller/StorageController.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -60,6 +76,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -69,7 +86,7 @@
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="preferences.editor" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -92,7 +109,7 @@
   <component name="RunManager" selected="Application.App">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="za.co.swingy.App" />
-      <module name="roelf" />
+      <module name="swing_maven" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -105,7 +122,7 @@
       <module name="roelf" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="za.co.swingy.controller.*" />
+          <option name="PATTERN" value="za.co.swingy.model.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -141,8 +158,12 @@
       <workItem from="1567051539530" duration="13443000" />
       <workItem from="1567093517493" duration="234000" />
       <workItem from="1567106018198" duration="12334000" />
-      <workItem from="1567138269734" duration="18293000" />
-      <workItem from="1567429039924" duration="472000" />
+      <workItem from="1567138269734" duration="7000000" />
+      <workItem from="1567330961625" duration="4793000" />
+      <workItem from="1567344883196" duration="1414000" />
+      <workItem from="1567407257962" duration="919000" />
+      <workItem from="1567423510347" duration="6740000" />
+      <workItem from="1567447308325" duration="1067000" />
     </task>
     <task id="LOCAL-00001" summary="Added Stuff">
       <created>1566886178596</created>
@@ -263,49 +284,7 @@
       <option name="project" value="LOCAL" />
       <updated>1567145153574</updated>
     </task>
-    <task id="LOCAL-00018" summary="- Code refactoring">
-      <created>1567145775852</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1567145775852</updated>
-    </task>
-    <task id="LOCAL-00019" summary="- Code refactoring">
-      <created>1567170069303</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1567170069303</updated>
-    </task>
-    <task id="LOCAL-00020" summary="- Code refactoring">
-      <created>1567173828721</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1567173828721</updated>
-    </task>
-    <task id="LOCAL-00021" summary="- Code refactoring">
-      <created>1567174187167</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1567174187167</updated>
-    </task>
-    <task id="LOCAL-00022" summary="- Code refactoring&#10;- Hero is now able to pickup items&#10;- items are applied and database immediately updates">
-      <created>1567176838568</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1567176838568</updated>
-    </task>
-    <task id="LOCAL-00023" summary="- Attempted to make item drops more random but dropped more evenly">
-      <created>1567176978516</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1567176978516</updated>
-    </task>
-    <option name="localTasksCounter" value="24" />
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -358,6 +337,7 @@
     <MESSAGE value="Added Stuff" />
     <MESSAGE value="Now saving character to db when new game is started" />
     <MESSAGE value="- Code refactoring&#10;- Added hibernate and javax validation dependencies&#10;- Added maven-jar-plugin to compile swingy jar" />
+    <MESSAGE value="- Code refactoring" />
     <MESSAGE value="Added maven-assembly-plugin to compile to a single executable jar with all dependencies" />
     <MESSAGE value="- Created Factory to create characters and drop items (incomplete)&#10;- Added Item interface&#10;- More code refactoring to suit builder design pattern" />
     <MESSAGE value="- Code refactoring&#10;- More Detail in Items (Armor...)&#10;- Added ItemController" />
@@ -369,10 +349,7 @@
     <MESSAGE value="- Code refactoring&#10;- Started implementing Map class" />
     <MESSAGE value="- Code refactoring&#10;- Started implementing Map class&#10;- Improved Error Logging for StorageController" />
     <MESSAGE value="- Code refactoring&#10;- Started implementing Map class&#10;- Now moving Hero through Map" />
-    <MESSAGE value="- Code refactoring" />
-    <MESSAGE value="- Code refactoring&#10;- Hero is now able to pickup items&#10;- items are applied and database immediately updates" />
-    <MESSAGE value="- Attempted to make item drops more random but dropped more evenly" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Attempted to make item drops more random but dropped more evenly" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Code refactoring&#10;- Started implementing Map class&#10;- Now moving Hero through Map" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>

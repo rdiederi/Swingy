@@ -3,7 +3,7 @@ package za.co.swingy.controller;
 
 import za.co.swingy.model.Hero;
 import za.co.swingy.view.ConsoleView;
-
+import za.co.swingy.model.*;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.Scanner;
@@ -18,30 +18,32 @@ public class ConsoleController {
         System.out.println("Give your " + types[type - 1] + " a name:");
         System.out.print(">> ");
         String name = input.nextLine();
-
-       return factory.newHero(types[type - 1], name);
-
+        ValidationModel val_1 = new ValidationModel(name, 4);
+        if (val_1.validator(0, name, 4))
+            return factory.newHero(types[type - 1], name);
+        nameHero(type, input);
+        return null;
     }
 
     public static Hero createHero(StorageController sc) {
-
         Hero hero = null;
-
         ConsoleView.printHeroClasses();
         System.out.print(">> ");
-
+        
         Scanner input = new Scanner(System.in);
-        String cmd = input.nextLine();
+        int cmd = input.nextInt();
+        ValidationModel val_1 = new ValidationModel(cmd, 2);
 
         //Save Selection
-        if (Integer.parseInt(cmd) > 0 && Integer.parseInt(cmd) < 4) {
-            hero = nameHero(Integer.parseInt(cmd), input);
+        if (val_1.validator(cmd, "", 2)) {
+            hero = nameHero(cmd, input);
+
             sc.saveHero(hero);
             return hero;
         } else {
-            System.out.println("Wrong! Try Again!");
             createHero(sc);
         }
+        input.close();
         return null;
     }
 
@@ -66,6 +68,7 @@ public class ConsoleController {
     }
 
     public static void gameLoop() throws IOException, SQLException {
+        
        Hero hero;
        StorageController sc = new StorageController();
        sc.createDB();
@@ -76,6 +79,11 @@ public class ConsoleController {
             System.out.print(">> ");
             Scanner input = new Scanner(System.in);
             int cmd = input.nextInt();
+            ValidationModel val_1 = new ValidationModel(cmd, 1);
+
+            if (!val_1.validator(cmd, "", 1))
+                continue;
+
             switch (cmd){
                 case 1:
                    hero = createHero(sc);
@@ -95,9 +103,6 @@ public class ConsoleController {
                     System.out.println("Good Bye!!\nCome again");
                     System.exit(0);
                     break;
-                default:
-                    System.out.println("You Fucked Up!\nTry Again!\n\n");
-                    ConsoleView.printWelcome();
             }
         }
     }

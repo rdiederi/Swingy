@@ -58,13 +58,14 @@ public class ConsoleController {
         String move;
         Scanner input = new Scanner(System.in);
 
+        System.out.print(ConsoleView.CLR_CLI);
         while(true)
         {
-            System.out.print(ConsoleView.CLR_CLI);
             ConsoleView.printHeroStats(hero);
             ConsoleView.drawMap(map.getDimension(), map.getMap());
             System.out.println("North (n)|South (s)|East (e)|West (w)");
             move = input.next();
+            System.out.print(ConsoleView.CLR_CLI);
             ValidationModel validationModel = new ValidationModel(move, 5);
             if (!validationModel.validator(0, move, 5))
                 continue;

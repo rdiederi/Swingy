@@ -155,8 +155,13 @@ public class Map {
             return "X".equalsIgnoreCase(map[y][x]);
         }
 
-    public boolean isItem() {
+    private boolean isItem() {
         return "C".equalsIgnoreCase(map[y][x]);
+    }
+
+    private void fightOrFlight(){
+        System.out.println("Will you fight?");
+        System.out.println("Will you run?");
     }
 
     void moveHero(String direction, Map mapObj, Hero hero)
@@ -177,6 +182,7 @@ public class Map {
                         factory.newItem().applyItem(hero);
                     } else if (isEnemy()) {
                         // Fight or flight
+                        fightOrFlight();
                     }
                         break;
                     case "s":
@@ -185,6 +191,7 @@ public class Map {
                         factory.newItem().applyItem(hero);
                     } else if (isEnemy()) {
                         // Fight or flight
+                        fightOrFlight();
                     }
                         break;
                     case "e":
@@ -193,6 +200,7 @@ public class Map {
                         factory.newItem().applyItem(hero);
                     } else if (isEnemy()) {
                         // Fight or flight
+                        fightOrFlight();
                     }
                         break;
                     case "w":
@@ -201,12 +209,14 @@ public class Map {
                         factory.newItem().applyItem(hero);
                     } else if (isEnemy()) {
                         // Fight or flight
+                        fightOrFlight();
                     }
                         break;
                 }
                 map[hero.getY()][hero.getX()] = "1";
             }
             else {
+                hero.gainXp(hero.getLvl() * 555);
                 mapObj.newMap(hero);
             }
         }

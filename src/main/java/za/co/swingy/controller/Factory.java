@@ -9,8 +9,6 @@ import za.co.swingy.model.characters.Hunter;
 class Factory {
     Hero newHero(String heroClass, String name) {
 
-        System.out.println("NULL");
-
         if (heroClass.equalsIgnoreCase("hunter")) {
             return new Hunter(name);
         } else if (heroClass.equalsIgnoreCase("deathnight")) {
@@ -18,7 +16,6 @@ class Factory {
         } else if (heroClass.equalsIgnoreCase("druid")) {
             return new Druid(name);
         }
-        System.out.println("NULL");
         return null;
     }
 

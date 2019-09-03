@@ -7,6 +7,7 @@ public abstract class Hero{
     protected int defense;
     protected int hp;
     protected int xp = 0;
+    protected int maxXp;
     protected int lvl = 1;
     protected int y,x;
     public String name;
@@ -63,5 +64,8 @@ public abstract class Hero{
     public abstract void fight();
     public abstract void run();
 
+    public abstract void gainXp(int points);
+
+    public abstract void reduceHp(int damage);
 
 }

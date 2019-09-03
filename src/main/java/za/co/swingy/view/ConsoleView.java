@@ -102,9 +102,9 @@ public class ConsoleView {
             for (int row = 0; row < dimension; row++)
             {
                 if (map[col][row].equals("X"))
-                    System.out.printf(ANSI_RED + map[col][row] + ANSI_RESET + " ");
+                    System.out.printf(ANSI_WHITE + "0" + ANSI_RESET + " ");
                 else if (map[col][row].equals("C"))
-                    System.out.printf(ANSI_YELLOW + map[col][row] + ANSI_RESET + " ");
+                    System.out.printf(ANSI_WHITE + "0" + ANSI_RESET + " ");
                 else if (map[col][row].equals("1"))
                     System.out.printf(ANSI_GREEN + map[col][row] + ANSI_RESET + " ");
                 else if (map[col][row].equals("."))

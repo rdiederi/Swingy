@@ -4,11 +4,11 @@ import za.co.swingy.model.Hero;
 
 public class Hunter extends Hero {
     public Hunter(){
-        this.setBase(25,15,80,0,0,0,0);
+        this.setBase(25,15,80,0,1,0,0);
     }
     public Hunter(String name){
         super(name);
-        this.setBase(25,15,80,0,0,0,0);
+        this.setBase(25,15,80,0,1,0,0);
     }
 
     @Override
@@ -108,12 +108,32 @@ public class Hunter extends Hero {
 
     @Override
     public void levelUp() {
-        System.out.println("This is temp");
+        lvl++;
+        this.attack = (int)(attack * 1.3);
+        this.defense = (int)(defense * 1.3);
+        this.hp = (int)(hp * 1.5);
+
+        System.out.println("Congrats! You leveled up!");
+        System.out.println("Map size increased.");
+    }
+
+    @Override
+    public void gainXp(int points) {
+        this.xp += points;
+        this.maxXp = this.lvl * 1000 + (lvl - 1) * (lvl - 1) * 450;
+        if (this.xp >= this.maxXp) {
+            levelUp();
+        }
+    }
+
+    @Override
+    public void reduceHp(int damage) {
+        this.hp -= damage;
     }
 
     @Override
     public void fight() {
-        System.out.println("This is temp");
+
     }
 
     @Override

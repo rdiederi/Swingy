@@ -2,15 +2,15 @@ package za.co.swingy.model;
 
 public abstract class Hero{
 
-    public int id;
-    public int attack;
-    public int defense;
-    public int hp;
-    public int xp = 0;
-    public int lvl = 1;
-    public int y,x;
+    protected int id;
+    protected int attack;
+    protected int defense;
+    protected int hp;
+    protected int xp = 0;
+    protected int lvl = 1;
+    protected int y,x;
     public String name;
-    public String type = new StringBuilder(String.valueOf(this.getClass())).delete(0, 36).toString();
+    protected String type = new StringBuilder(String.valueOf(this.getClass())).delete(0, 36).toString();
 
     public Hero(){}
 
@@ -19,7 +19,7 @@ public abstract class Hero{
     }
 
 
-    public void setBase(int attack, int defense, int hp, int xp, int lvl, int x, int y){
+    protected void setBase(int attack, int defense, int hp, int xp, int lvl, int x, int y){
         setAttack(attack);
         setDefense(defense);
         setHp(hp);

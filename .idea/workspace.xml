@@ -19,13 +19,17 @@
       <change beforePath="$PROJECT_DIR$/bin/src/main/java/za/co/swingy/model/items/Helm.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/src/main/java/za/co/swingy/model/items/Weapon.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/src/main/java/za/co/swingy/view/ConsoleView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/co/swingy/controller/ConsoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/co/swingy/controller/ConsoleController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/za/co/swingy/controller/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/co/swingy/controller/Map.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/co/swingy/controller/StorageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/co/swingy/controller/StorageController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/za/co/swingy/view/ConsoleView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/co/swingy/view/ConsoleView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/za/co/swingy/controller/ConsoleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/za/co/swingy/controller/ConsoleController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/za/co/swingy/controller/Factory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/za/co/swingy/controller/Factory.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/za/co/swingy/controller/Map.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/za/co/swingy/controller/Map.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/za/co/swingy/controller/StorageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/za/co/swingy/controller/StorageController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/za/co/swingy/model/items/Armor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/za/co/swingy/model/items/Armor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/za/co/swingy/model/items/Helm.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/za/co/swingy/model/items/Helm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/za/co/swingy/model/items/Weapon.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/za/co/swingy/model/items/Weapon.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/za/co/swingy/view/ConsoleView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/za/co/swingy/view/ConsoleView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/swingy-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/swingy-1.0.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/swingy.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/swingy.jar" afterDir="false" />
     </list>
@@ -172,7 +176,7 @@
       <workItem from="1567497825884" duration="34000" />
       <workItem from="1567497910830" duration="4045000" />
       <workItem from="1567513252772" duration="3027000" />
-      <workItem from="1567530630673" duration="7030000" />
+      <workItem from="1567530630673" duration="11276000" />
     </task>
     <task id="LOCAL-00001" summary="Added Stuff">
       <created>1566886178596</created>

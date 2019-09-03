@@ -105,6 +105,8 @@ public class StorageController {
 
     static Hero loadHero(ResultSet resultSet, int rowCount) {
         try {
+            if (resultSet == null)
+                return null;
             Factory factory = new Factory();
             while (resultSet.next() && rowCount > 1)
                 --rowCount;
@@ -138,6 +140,19 @@ public class StorageController {
             statement.setInt(5, hero.getXp());
 
             statement.executeUpdate();
+        } catch (SQLException e) {
+            System.out.println("ERROR: " + "[" + new Exception().getStackTrace()[0].getMethodName() + "]" + " -> " + e.getMessage());
+        }
+    }
+
+    public static void deleteGame(Hero hero) throws SQLException {
+        try {
+            String query = "DELETE FROM "+ db + ".hero " + " WHERE name = ?;";
+
+            PreparedStatement statement = cnx.prepareStatement(query);
+
+            statement.setString(1, hero.getName());
+            statement.execute();
         } catch (SQLException e) {
             System.out.println("ERROR: " + "[" + new Exception().getStackTrace()[0].getMethodName() + "]" + " -> " + e.getMessage());
         }

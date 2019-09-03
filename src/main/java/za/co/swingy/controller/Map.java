@@ -174,8 +174,10 @@ public class Map {
         else{
             ConsoleView.printGameOver(enemy);
             System.out.println("Good Bye!!!!!");
+            System.out.println("b) back to main menu");
             Scanner input = new Scanner(System.in);
             String la = input.next();
+            StorageController.deleteGame(hero);
             ConsoleController.gameLoop();
         }
     }
@@ -189,11 +191,7 @@ public class Map {
         int rand = (int)(Math.random() * range) + min;
         boolean possibility = Math.random() < 0.5;
 
-        System.out.println("Looks like you ran into "+ enemy[rand]);
-        System.out.println("Fight or Flight");
-        System.out.println("1) Fight");
-        System.out.println("2) Run");
-        System.out.println(">> ");
+        ConsoleView.printFightOrFlight(enemy[rand]);
         Scanner input = new Scanner(System.in);
         int cmd = input.nextInt();
 
@@ -202,10 +200,9 @@ public class Map {
         } else if (cmd == 2){
             if (possibility){
                 goBack(hero, direction);
-            } else {
                 System.out.print(ConsoleView.CLR_CLI);
-                System.out.println("Tough Shit. Fight coward!!!");
-                System.out.println("Your mom has bigger balls than you!!!");
+            } else {
+                ConsoleView.printToughShit();
                 fight(hero,enemy[rand]);
             }
         }

@@ -19,6 +19,20 @@ public class ConsoleView {
     public static String ANSI_RESET = "\u001B[0m";
     public static String CLR_CLI = "\033[H\033[2J";
 
+    public static void printToughShit(){
+        System.out.print(ConsoleView.CLR_CLI);
+        System.out.println("Tough Shit. Fight coward!!!");
+        System.out.println("Your mom has bigger balls than you!!!");
+    }
+
+    public static void printFightOrFlight(String enemy){
+        System.out.println("Looks like you ran into "+ enemy);
+        System.out.println("Fight or Flight");
+        System.out.println("1) Fight");
+        System.out.println("2) Run");
+        System.out.print(">> ");
+    }
+
     public static void printGameOver(String enemy){
         System.out.print(ConsoleView.CLR_CLI);
         System.out.println("" +

@@ -98,6 +98,13 @@ public class ConsoleController {
                         break;
                     case 2:
                         System.out.print(ConsoleView.CLR_CLI);
+//                        if (sc.loadGameData() == null){
+//                            System.out.println("No games found");
+//                            System.out.println("b) back");
+//                            String la = input.next();
+//                            System.out.print(ConsoleView.CLR_CLI);
+//                            continue;
+//                        }
                         ConsoleView.printSavedHeroes(sc.loadGameData());
                         System.out.print("\n>> ");
                         cmd = input.nextInt();

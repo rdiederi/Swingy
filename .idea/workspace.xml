@@ -3,28 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="36a168e2-0830-417d-884f-cfa8ef05044b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin" beforeDir="false" afterPath="$PROJECT_DIR$/bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/src/main/java/za/co/swingy/App.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/src/main/java/za/co/swingy/controller/ConsoleController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/src/main/java/za/co/swingy/controller/Factory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/src/main/java/za/co/swingy/controller/ItemController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/src/main/java/za/co/swingy/controller/Map.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/src/main/java/za/co/swingy/controller/StorageController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/src/main/java/za/co/swingy/model/Hero.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/src/main/java/za/co/swingy/model/Item.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/src/main/java/za/co/swingy/model/characters/DeathNight.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/src/main/java/za/co/swingy/model/characters/Druid.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/src/main/java/za/co/swingy/model/characters/Hunter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/src/main/java/za/co/swingy/model/items/Armor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/src/main/java/za/co/swingy/model/items/Helm.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/src/main/java/za/co/swingy/model/items/Weapon.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/src/main/java/za/co/swingy/view/ConsoleView.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/za/co/swingy/controller/ConsoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/co/swingy/controller/ConsoleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/co/swingy/controller/Factory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/co/swingy/controller/Factory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/za/co/swingy/view/ConsoleView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/co/swingy/view/ConsoleView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/za/co/swingy/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/za/co/swingy/App.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/za/co/swingy/controller/ConsoleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/za/co/swingy/controller/ConsoleController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/za/co/swingy/model/ValidationModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/za/co/swingy/model/ValidationModel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/za/co/swingy/view/ConsoleView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/za/co/swingy/view/ConsoleView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/za/co/swingy/controller/Factory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/za/co/swingy/controller/Factory.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -111,7 +95,7 @@
   <component name="RunManager" selected="Application.App">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="za.co.swingy.App" />
-      <module name="swing_maven" />
+      <module name="roelf" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>

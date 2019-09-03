@@ -77,6 +77,7 @@ public class ConsoleView {
         System.out.println("Defense: " + hero.getDefense());
         System.out.println("HP: " + hero.getHp());
         System.out.println("Experience: " + hero.getXp());
+        System.out.println("Level: " + hero.getLvl());
         System.out.println("--------------------");
         System.out.println();
     }
@@ -85,7 +86,7 @@ public class ConsoleView {
         int rowCount = 1;
         System.out.println("Load Hero: ");
         while(rset.next()) {
-            System.out.print(rowCount + "|" + rset.getString("name") + "\t\t\t");
+            System.out.print(rowCount + "|" + rset.getString("name") + "\t\t\t\t");
             if (rowCount % 10 == 0) {
                 System.out.println();
             }

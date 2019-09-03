@@ -2,14 +2,17 @@ package za.co.swingy.controller;
 
 
 import za.co.swingy.model.Hero;
+import za.co.swingy.model.ValidationModel;
 import za.co.swingy.view.ConsoleView;
-import za.co.swingy.view.ConsoleView.*;
-import za.co.swingy.model.*;
+
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.Scanner;
 
 public class ConsoleController {
+    static Hero hero;
+    static StorageController sc = new StorageController();
+    static ValidationModel validationModel;
 
     public static Hero nameHero(int type) {
 
@@ -20,8 +23,8 @@ public class ConsoleController {
         System.out.print(">> ");
         String name = input.nextLine();
 //        input.close();
-        ValidationModel val_1 = new ValidationModel(name, 4);
-        if (val_1.validator(0, name, 4))
+        ValidationModel validationModel = new ValidationModel(name, 4);
+        if (validationModel.validator(0, name, 4))
             return factory.newHero(types[type - 1], name);
         nameHero(type);
         return null;
@@ -35,10 +38,10 @@ public class ConsoleController {
         
         Scanner input = new Scanner(System.in);
         int cmd = input.nextInt();
-        ValidationModel val_1 = new ValidationModel(cmd, 2);
+        ValidationModel validationModel = new ValidationModel(cmd, 2);
 
         //Save Selection
-        if (val_1.validator(cmd, "", 2)){
+        if (validationModel.validator(cmd, "", 2)){
             hero = nameHero(cmd);
             sc.saveHero(hero);
             return hero;
@@ -63,21 +66,17 @@ public class ConsoleController {
             ConsoleView.drawMap(map.getDimension(), map.getMap());
             System.out.println("North (n)|South (s)|East (e)|West (w)");
             move = input.next();
-            ValidationModel val_1 = new ValidationModel(move, 5);
-            if (!val_1.validator(0, move, 5))
+            validationModel = new ValidationModel(move, 5);
+            if (!validationModel.validator(0, move, 5))
                 continue;
             map.moveHero(move, map, hero);
             System.out.println(hero.getX() + " " + hero.getY());
-//            clearConsole();
         }
     }
 
     public static void gameLoop() throws IOException, SQLException {
-        
-       Hero hero;
-       StorageController sc = new StorageController();
-       sc.createDB();
-       sc.createTB();
+        sc.createDB();
+        sc.createTB();
 
         while (true){
             System.out.print(ConsoleView.CLR_CLI);
@@ -85,16 +84,15 @@ public class ConsoleController {
             System.out.print(">> ");
             Scanner input = new Scanner(System.in);
             int cmd = input.nextInt();
-            ValidationModel val_1 = new ValidationModel(cmd, 1);
+            ValidationModel validationModel = new ValidationModel(cmd, 1);
 
-            if (!val_1.validator(cmd, "", 1))
+            if (!validationModel.validator(cmd, "", 1))
                 continue;
 
             switch (cmd){
                 case 1:
                    hero = createHero(sc);
                     startGame(hero);
-//                    hero.setLvl(7);
                     break;
                 case 2:
                     System.out.print(ConsoleView.CLR_CLI);
@@ -102,7 +100,7 @@ public class ConsoleController {
                     System.out.print("\n>> ");
                     cmd = input.nextInt();
                     hero = StorageController.loadHero(sc.loadGameData(), cmd);
-//                    startGame(hero);
+                    startGame(hero);
                     break;
                 case 3:
                     //Exit

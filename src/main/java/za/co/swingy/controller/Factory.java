@@ -2,6 +2,7 @@ package za.co.swingy.controller;
 
 import za.co.swingy.model.Hero;
 import za.co.swingy.model.Item;
+import za.co.swingy.model.ValidationModel;
 import za.co.swingy.model.characters.DeathNight;
 import za.co.swingy.model.characters.Druid;
 import za.co.swingy.model.characters.Hunter;
@@ -29,5 +30,12 @@ class Factory {
 
     static Map newMap(Hero hero) {
         return new Map(hero);
+    }
+
+    ValidationModel newValidationModel(int cmd, String string, int class_) {
+        if (cmd == 0){
+            return new ValidationModel(string, class_);
+        } else
+            return new ValidationModel(cmd, class_);
     }
 }

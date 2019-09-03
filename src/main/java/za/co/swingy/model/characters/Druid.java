@@ -121,13 +121,4 @@ public class Druid  extends Hero {
     public void run() {
         System.out.println("This is temp");
     }
-
-//    @Override
-//    public void attack(){
-//        System.out.println("SPAAAARRRRTTTTTAAAAA!!!!!");
-//    };
-//    @Override
-//    public void escape() {
-//        System.out.println("this bitch ran");
-//    }
 }

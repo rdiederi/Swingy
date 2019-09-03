@@ -117,21 +117,4 @@ public class DeathNight extends Hero {
     public void run() {
         System.out.println("This is temp");
     }
-
-//    @Override
-//    public void attack(){
-//        System.out.println("SPAAAARRRRTTTTTAAAAA!!!!!");
-//    };
-//    @Override
-//    public void escape() {
-//        System.out.println("this bitch ran");
-//    }
-//    @Override
-//    public JSONObject getStats() {
-//        JSONObject obj = new JSONObject();
-//
-////        obj.put("attack", this.attack);
-//
-//        this.attack();
-//    }
 }

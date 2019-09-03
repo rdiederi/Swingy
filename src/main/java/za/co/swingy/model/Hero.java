@@ -60,5 +60,8 @@ public abstract class Hero{
 
     public abstract void levelUp();
 
+    public abstract void fight();
+    public abstract void run();
+
 
 }

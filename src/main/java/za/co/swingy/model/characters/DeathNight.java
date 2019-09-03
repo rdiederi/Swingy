@@ -108,6 +108,16 @@ public class DeathNight extends Hero {
         System.out.println("This is temp");
     }
 
+    @Override
+    public void fight() {
+        System.out.println("This is temp");
+    }
+
+    @Override
+    public void run() {
+        System.out.println("This is temp");
+    }
+
 //    @Override
 //    public void attack(){
 //        System.out.println("SPAAAARRRRTTTTTAAAAA!!!!!");

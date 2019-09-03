@@ -1,13 +1,12 @@
 package za.co.swingy.controller;
 
-
 import za.co.swingy.model.Hero;
 import za.co.swingy.model.ValidationModel;
 import za.co.swingy.view.ConsoleView;
-
 import java.sql.SQLException;
 import java.util.InputMismatchException;
 import java.util.Scanner;
+import java.util.concurrent.TimeUnit;
 
 public class ConsoleController {
     static Hero hero;
@@ -16,40 +15,44 @@ public class ConsoleController {
 
     public static Hero nameHero(int type) {
 
-        String[] types = {"Druid", "Hunter", "DeathNight"};
+        String[] types = {
+            "Druid",
+            "Hunter",
+            "DeathNight"
+        };
         Scanner input = new Scanner(System.in);
         System.out.println("Give your " + types[type - 1] + " a name:");
         System.out.print(">> ");
         String name = input.nextLine();
-//        input.close();
+
         ValidationModel validationModel = new ValidationModel(name, 4);
         if (validationModel.validator(0, name, 4)) {
             return factory.newHero(types[type - 1], name);
         }
-        nameHero(type);
-        return null;
+        return nameHero(type);
     }
 
-    public static Hero createHero(StorageController sc) {
+    public static Hero createHero(StorageController sc) throws NumberFormatException {
         Hero hero = null;
         System.out.print(ConsoleView.CLR_CLI);
         ConsoleView.printHeroClasses();
         System.out.print(">> ");
-        
-        Scanner input = new Scanner(System.in);
-        int cmd = input.nextInt();
-        ValidationModel validationModel = new ValidationModel(cmd, 2);
 
-        //Save Selection
-        if (validationModel.validator(cmd, null, 2)){
+        try {
+            Scanner input = new Scanner(System.in);
+            String result = input.nextLine();
+            int cmd = Integer.parseInt(result);
+            ValidationModel validationModel = new ValidationModel(cmd, 2);
+
+            if (!validationModel.validator(cmd, null, 2))
+                return createHero(sc);
+
             hero = nameHero(cmd);
             sc.saveHero(hero);
-            return hero;
+        } catch (NumberFormatException e){
+            return createHero(sc);
         }
-
-        createHero(sc);
-        input.close();
-        return null;
+        return hero;
     }
 
     public static void startGame(Hero hero) throws InputMismatchException {
@@ -59,8 +62,7 @@ public class ConsoleController {
         Scanner input = new Scanner(System.in);
 
         System.out.print(ConsoleView.CLR_CLI);
-        while(true)
-        {
+        while (true) {
             ConsoleView.printHeroStats(hero);
             ConsoleView.drawMap(map.getDimension(), map.getMap());
             System.out.println("North (n)|South (s)|East (e)|West (w)");
@@ -76,37 +78,42 @@ public class ConsoleController {
     public static void gameLoop() throws SQLException, InputMismatchException {
         sc.createDB();
         sc.createTB();
+        System.out.print(ConsoleView.CLR_CLI);
+        while (true) {
+            try {
+                ConsoleView.printWelcome();
+                System.out.print(">> ");
+                Scanner input = new Scanner(System.in);
+                int cmd = input.nextInt();
+                System.out.print(ConsoleView.CLR_CLI);
+                ValidationModel validationModel = new ValidationModel(cmd, 1);
 
-        while (true){
-            System.out.print(ConsoleView.CLR_CLI);
-            ConsoleView.printWelcome();
-            System.out.print(">> ");
-            Scanner input = new Scanner(System.in);
-            int cmd = input.nextInt();
-            ValidationModel validationModel = new ValidationModel(cmd, 1);
+                if (!validationModel.validator(cmd, null, 1))
+                    continue;
 
-            if (!validationModel.validator(cmd, null, 1))
+                switch (cmd) {
+                    case 1:
+                        hero = createHero(sc);
+                        startGame(hero);
+                        break;
+                    case 2:
+                        System.out.print(ConsoleView.CLR_CLI);
+                        ConsoleView.printSavedHeroes(sc.loadGameData());
+                        System.out.print("\n>> ");
+                        cmd = input.nextInt();
+                        hero = StorageController.loadHero(sc.loadGameData(), cmd);
+                        startGame(hero);
+                        break;
+                    case 3:
+                        //Exit
+                        System.out.print(ConsoleView.CLR_CLI);
+                        System.out.println("Good Bye!!\nCome again");
+                        System.exit(0);
+                        break;
+                }
+            } catch (InputMismatchException e) {
+                System.out.print(ConsoleView.CLR_CLI);
                 continue;
-
-            switch (cmd){
-                case 1:
-                   hero = createHero(sc);
-                    startGame(hero);
-                    break;
-                case 2:
-                    System.out.print(ConsoleView.CLR_CLI);
-                    ConsoleView.printSavedHeroes(sc.loadGameData());
-                    System.out.print("\n>> ");
-                    cmd = input.nextInt();
-                    hero = StorageController.loadHero(sc.loadGameData(), cmd);
-                    startGame(hero);
-                    break;
-                case 3:
-                    //Exit
-                    System.out.print(ConsoleView.CLR_CLI);
-                    System.out.println("Good Bye!!\nCome again");
-                    System.exit(0);
-                    break;
             }
         }
     }

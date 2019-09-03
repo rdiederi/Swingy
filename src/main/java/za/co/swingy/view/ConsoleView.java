@@ -92,7 +92,6 @@ public class ConsoleView {
             }
             ++rowCount;
         }
-
     }
 
     public static void drawMap(int dimension, String map[][])

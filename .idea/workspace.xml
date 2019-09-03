@@ -1,25 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="36a168e2-0830-417d-884f-cfa8ef05044b" name="Default Changelist" comment="- Fixed clearscreen&#10;- Implemented Xp gain after each map is finished&#10;-">
+    <list default="true" id="36a168e2-0830-417d-884f-cfa8ef05044b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin" beforeDir="false" afterPath="$PROJECT_DIR$/bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/za/co/swingy/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/za/co/swingy/controller/ConsoleController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/za/co/swingy/controller/Factory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/za/co/swingy/controller/ItemController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/za/co/swingy/controller/Map.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/za/co/swingy/controller/StorageController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/za/co/swingy/model/Hero.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/za/co/swingy/model/Item.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/za/co/swingy/model/characters/DeathNight.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/za/co/swingy/model/characters/Druid.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/za/co/swingy/model/characters/Hunter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/za/co/swingy/model/items/Armor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/za/co/swingy/model/items/Helm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/za/co/swingy/model/items/Weapon.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/java/za/co/swingy/view/ConsoleView.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/za/co/swingy/controller/ConsoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/co/swingy/controller/ConsoleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/co/swingy/controller/Factory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/co/swingy/controller/Factory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/za/co/swingy/controller/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/co/swingy/controller/Map.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/co/swingy/model/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/co/swingy/model/Hero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/co/swingy/model/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/co/swingy/model/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/co/swingy/model/characters/DeathNight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/co/swingy/model/characters/DeathNight.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/co/swingy/model/characters/Druid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/co/swingy/model/characters/Druid.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/co/swingy/model/characters/Hunter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/co/swingy/model/characters/Hunter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/co/swingy/model/ValidationModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/co/swingy/model/ValidationModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/za/co/swingy/view/ConsoleView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/co/swingy/view/ConsoleView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/za/co/swingy/controller/ConsoleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/za/co/swingy/controller/ConsoleController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/za/co/swingy/controller/Factory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/za/co/swingy/controller/Factory.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/za/co/swingy/controller/Map.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/za/co/swingy/controller/Map.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/za/co/swingy/model/Hero.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/za/co/swingy/model/Hero.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/za/co/swingy/model/ValidationModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/za/co/swingy/model/ValidationModel.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/za/co/swingy/model/characters/DeathNight.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/za/co/swingy/model/characters/DeathNight.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/za/co/swingy/model/characters/Druid.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/za/co/swingy/model/characters/Druid.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/za/co/swingy/model/characters/Hunter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/za/co/swingy/model/characters/Hunter.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/za/co/swingy/view/ConsoleView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/za/co/swingy/view/ConsoleView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/swingy-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/swingy-1.0.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/swingy.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/swingy.jar" afterDir="false" />
     </list>
@@ -108,7 +120,7 @@
   <component name="RunManager" selected="Application.App">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="za.co.swingy.App" />
-      <module name="roelf" />
+      <module name="swing_maven" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -162,7 +174,10 @@
       <workItem from="1567344883196" duration="1414000" />
       <workItem from="1567407257962" duration="919000" />
       <workItem from="1567423510347" duration="6740000" />
-      <workItem from="1567447308325" duration="4405000" />
+      <workItem from="1567447308325" duration="4638000" />
+      <workItem from="1567497825884" duration="34000" />
+      <workItem from="1567497910830" duration="4045000" />
+      <workItem from="1567513252772" duration="3027000" />
     </task>
     <task id="LOCAL-00001" summary="Added Stuff">
       <created>1566886178596</created>
@@ -283,42 +298,7 @@
       <option name="project" value="LOCAL" />
       <updated>1567145153574</updated>
     </task>
-    <task id="LOCAL-00018" summary="- Code refactoring">
-      <created>1567486054758</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1567486054758</updated>
-    </task>
-    <task id="LOCAL-00019" summary="- Code refactoring&#10;- started on run() and fight() methods">
-      <created>1567486276846</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1567486276846</updated>
-    </task>
-    <task id="LOCAL-00020" summary="- Code refactoring">
-      <created>1567486375747</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1567486375747</updated>
-    </task>
-    <task id="LOCAL-00021" summary="- Code refactoring&#10;- Added InputMisMatchException -&gt; will catch exception later">
-      <created>1567488886561</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1567488886561</updated>
-    </task>
-    <task id="LOCAL-00022" summary="- Changed access modifiers in abstract class to protected">
-      <created>1567492629377</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1567492629377</updated>
-    </task>
-    <option name="localTasksCounter" value="23" />
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -371,6 +351,7 @@
     <MESSAGE value="Added Stuff" />
     <MESSAGE value="Now saving character to db when new game is started" />
     <MESSAGE value="- Code refactoring&#10;- Added hibernate and javax validation dependencies&#10;- Added maven-jar-plugin to compile swingy jar" />
+    <MESSAGE value="- Code refactoring" />
     <MESSAGE value="Added maven-assembly-plugin to compile to a single executable jar with all dependencies" />
     <MESSAGE value="- Created Factory to create characters and drop items (incomplete)&#10;- Added Item interface&#10;- More code refactoring to suit builder design pattern" />
     <MESSAGE value="- Code refactoring&#10;- More Detail in Items (Armor...)&#10;- Added ItemController" />
@@ -382,11 +363,7 @@
     <MESSAGE value="- Code refactoring&#10;- Started implementing Map class" />
     <MESSAGE value="- Code refactoring&#10;- Started implementing Map class&#10;- Improved Error Logging for StorageController" />
     <MESSAGE value="- Code refactoring&#10;- Started implementing Map class&#10;- Now moving Hero through Map" />
-    <MESSAGE value="- Code refactoring&#10;- started on run() and fight() methods" />
-    <MESSAGE value="- Code refactoring" />
-    <MESSAGE value="- Code refactoring&#10;- Added InputMisMatchException -&gt; will catch exception later" />
-    <MESSAGE value="- Changed access modifiers in abstract class to protected" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Changed access modifiers in abstract class to protected" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Code refactoring&#10;- Started implementing Map class&#10;- Now moving Hero through Map" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>

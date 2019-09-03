@@ -16,7 +16,7 @@ public class ValidationModel {
     private int firstMenu = 1; // 1
 
     @Size(min = 1, max = 50, message = "Name length >= 1 & <= 50")
-//    @NotNull(message = "Name cannot be empty")
+    @NotNull(message = "Name cannot be empty")
     private String heroName  = "d "; // name 4
 
     @Range(min = 1, max = 3, message = "No such class")

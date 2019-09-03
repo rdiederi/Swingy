@@ -151,7 +151,7 @@ public class Map {
         hero.setX(hero.getX() + 1);
     }
 
-        private boolean isEnemy() {
+    private boolean isEnemy() {
             return "X".equalsIgnoreCase(map[y][x]);
         }
 
@@ -170,7 +170,6 @@ public class Map {
         boolean result = Arrays.asList(directions).contains(direction);
         String[][] map = mapObj.getMap();
         Factory factory = new Factory();
-
 
         if (result) {
             map[hero.getY()][hero.getX()] = ".";

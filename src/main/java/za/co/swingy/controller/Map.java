@@ -1,9 +1,12 @@
 package za.co.swingy.controller;
 
 import za.co.swingy.model.Hero;
+import za.co.swingy.view.ConsoleView;
 
+import java.sql.SQLException;
 import java.util.Arrays;
 import java.util.Random;
+import java.util.Scanner;
 
 public class Map {
 
@@ -159,12 +162,67 @@ public class Map {
         return "C".equalsIgnoreCase(map[y][x]);
     }
 
-    private void fightOrFlight(){
-        System.out.println("Will you fight?");
-        System.out.println("Will you run?");
+    private void fight(Hero hero, String enemy)  throws SQLException {
+        StorageController sc = new StorageController();
+
+        boolean probability = Math.random() < 0.5;
+
+        if (probability){
+            System.out.println("You killed "+ enemy);
+            hero.gainXp(50);
+        }
+        else{
+            ConsoleView.printGameOver(enemy);
+            System.out.println("Good Bye!!!!!");
+            Scanner input = new Scanner(System.in);
+            String la = input.next();
+            ConsoleController.gameLoop();
+        }
     }
 
-    void moveHero(String direction, Map mapObj, Hero hero)
+    private void fightOrFlight(Hero hero, String direction) throws SQLException{
+        int min = 0;
+        int max = 4;
+        int range = max - min - 1;
+
+        String[] enemy = {"Bob", "Larry", "Jeff", "Justin", "Mufaro"};
+        int rand = (int)(Math.random() * range) + min;
+        boolean possibility = Math.random() < 0.5;
+
+        System.out.println("Looks like you ran into "+ enemy[rand]);
+        System.out.println("Fight or Flight");
+        System.out.println("1) Fight");
+        System.out.println("2) Run");
+        System.out.println(">> ");
+        Scanner input = new Scanner(System.in);
+        int cmd = input.nextInt();
+
+        if (cmd == 1){
+            fight(hero,enemy[rand]);
+        } else if (cmd == 2){
+            if (possibility){
+                goBack(hero, direction);
+            } else {
+                System.out.print(ConsoleView.CLR_CLI);
+                System.out.println("Tough Shit. Fight coward!!!");
+                System.out.println("Your mom has bigger balls than you!!!");
+                fight(hero,enemy[rand]);
+            }
+        }
+    }
+
+    private void goBack(Hero hero, String direction) {
+        if (direction.equals("n"))
+            moveDown(hero);
+        if (direction.equals("e"))
+            moveLeft(hero);
+        if (direction.equals("s"))
+            moveUp(hero);
+        if (direction.equals("w"))
+            moveRight(hero);
+    }
+
+    void moveHero(String direction, Map mapObj, Hero hero) throws SQLException
     {
         String[] directions = new String[]{"n", "s", "e", "w"};
         boolean result = Arrays.asList(directions).contains(direction);
@@ -181,7 +239,7 @@ public class Map {
                         factory.newItem().applyItem(hero);
                     } else if (isEnemy()) {
                         // Fight or flight
-                        fightOrFlight();
+                        fightOrFlight(hero,direction);
                     }
                         break;
                     case "s":
@@ -190,7 +248,7 @@ public class Map {
                         factory.newItem().applyItem(hero);
                     } else if (isEnemy()) {
                         // Fight or flight
-                        fightOrFlight();
+                        fightOrFlight(hero,direction);
                     }
                         break;
                     case "e":
@@ -199,7 +257,7 @@ public class Map {
                         factory.newItem().applyItem(hero);
                     } else if (isEnemy()) {
                         // Fight or flight
-                        fightOrFlight();
+                        fightOrFlight(hero,direction);
                     }
                         break;
                     case "w":
@@ -208,7 +266,7 @@ public class Map {
                         factory.newItem().applyItem(hero);
                     } else if (isEnemy()) {
                         // Fight or flight
-                        fightOrFlight();
+                        fightOrFlight(hero,direction);
                     }
                         break;
                 }

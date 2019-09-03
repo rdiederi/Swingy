@@ -19,6 +19,19 @@ public class ConsoleView {
     public static String ANSI_RESET = "\u001B[0m";
     public static String CLR_CLI = "\033[H\033[2J";
 
+    public static void printGameOver(String enemy){
+        System.out.print(ConsoleView.CLR_CLI);
+        System.out.println("" +
+                "      ::::::::      :::       :::   :::   ::::::::::          ::::::::  :::     ::: :::::::::: ::::::::: \n" +
+                "    :+:    :+:   :+: :+:    :+:+: :+:+:  :+:                :+:    :+: :+:     :+: :+:        :+:    :+: \n" +
+                "   +:+         +:+   +:+  +:+ +:+:+ +:+ +:+                +:+    +:+ +:+     +:+ +:+        +:+    +:+  \n" +
+                "  :#:        +#++:++#++: +#+  +:+  +#+ +#++:++#           +#+    +:+ +#+     +:+ +#++:++#   +#++:++#:    \n" +
+                " +#+   +#+# +#+     +#+ +#+       +#+ +#+                +#+    +#+  +#+   +#+  +#+        +#+    +#+    \n" +
+                "#+#    #+# #+#     #+# #+#       #+# #+#                #+#    #+#   #+#+#+#   #+#        #+#    #+#     \n" +
+                "########  ###     ### ###       ### ##########          ########      ###     ########## ###    ###      ");
+        System.out.println(enemy + " killed you!");
+    }
+
     public static void printWelcome (){
         System.out.println("Welcome!");
         System.out.println("Choose an option:");

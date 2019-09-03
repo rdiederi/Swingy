@@ -55,7 +55,7 @@ public class ConsoleController {
         return hero;
     }
 
-    public static void startGame(Hero hero) throws InputMismatchException {
+    public static void startGame(Hero hero) throws InputMismatchException, SQLException {
         Map map;
         map = factory.newMap(hero);
         String move;

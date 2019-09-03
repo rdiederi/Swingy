@@ -6,6 +6,7 @@ public class DeathNight extends Hero {
     public DeathNight(){  this.setBase(40,10,150,0,0,0,0);    }
     public DeathNight(String name){
         super(name);
+        System.out.println(name);
         this.setBase(40,10,150,0,0,0,0);
     }
 

@@ -5,18 +5,17 @@ import za.co.swingy.model.Hero;
 import za.co.swingy.model.ValidationModel;
 import za.co.swingy.view.ConsoleView;
 
-import java.io.IOException;
 import java.sql.SQLException;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class ConsoleController {
     static Hero hero;
     static StorageController sc = new StorageController();
-    static ValidationModel validationModel;
+    static Factory factory = new Factory();
 
     public static Hero nameHero(int type) {
 
-        Factory factory = new Factory();
         String[] types = {"Druid", "Hunter", "DeathNight"};
         Scanner input = new Scanner(System.in);
         System.out.println("Give your " + types[type - 1] + " a name:");
@@ -24,8 +23,9 @@ public class ConsoleController {
         String name = input.nextLine();
 //        input.close();
         ValidationModel validationModel = new ValidationModel(name, 4);
-        if (validationModel.validator(0, name, 4))
+        if (validationModel.validator(0, name, 4)) {
             return factory.newHero(types[type - 1], name);
+        }
         nameHero(type);
         return null;
     }
@@ -41,7 +41,7 @@ public class ConsoleController {
         ValidationModel validationModel = new ValidationModel(cmd, 2);
 
         //Save Selection
-        if (validationModel.validator(cmd, "", 2)){
+        if (validationModel.validator(cmd, null, 2)){
             hero = nameHero(cmd);
             sc.saveHero(hero);
             return hero;
@@ -52,8 +52,7 @@ public class ConsoleController {
         return null;
     }
 
-    public static void startGame(Hero hero) throws SQLException {
-        Factory factory = new Factory();
+    public static void startGame(Hero hero) throws InputMismatchException {
         Map map;
         map = factory.newMap(hero);
         String move;
@@ -66,15 +65,14 @@ public class ConsoleController {
             ConsoleView.drawMap(map.getDimension(), map.getMap());
             System.out.println("North (n)|South (s)|East (e)|West (w)");
             move = input.next();
-            validationModel = new ValidationModel(move, 5);
+            ValidationModel validationModel = new ValidationModel(move, 5);
             if (!validationModel.validator(0, move, 5))
                 continue;
             map.moveHero(move, map, hero);
-            System.out.println(hero.getX() + " " + hero.getY());
         }
     }
 
-    public static void gameLoop() throws IOException, SQLException {
+    public static void gameLoop() throws SQLException, InputMismatchException {
         sc.createDB();
         sc.createTB();
 
@@ -86,7 +84,7 @@ public class ConsoleController {
             int cmd = input.nextInt();
             ValidationModel validationModel = new ValidationModel(cmd, 1);
 
-            if (!validationModel.validator(cmd, "", 1))
+            if (!validationModel.validator(cmd, null, 1))
                 continue;
 
             switch (cmd){

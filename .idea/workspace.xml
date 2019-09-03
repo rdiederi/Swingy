@@ -2,11 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="36a168e2-0830-417d-884f-cfa8ef05044b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/co/swingy/model/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/co/swingy/model/Hero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/co/swingy/controller/ConsoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/co/swingy/controller/ConsoleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/co/swingy/controller/Factory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/co/swingy/controller/Factory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/co/swingy/model/ValidationModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/co/swingy/model/ValidationModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/za/co/swingy/model/characters/DeathNight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/co/swingy/model/characters/DeathNight.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/co/swingy/model/characters/Druid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/co/swingy/model/characters/Druid.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/co/swingy/model/characters/Hunter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/co/swingy/model/characters/Hunter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/za/co/swingy/view/ConsoleView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/za/co/swingy/view/ConsoleView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/za/co/swingy/controller/ConsoleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/za/co/swingy/controller/ConsoleController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/za/co/swingy/controller/Factory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/za/co/swingy/controller/Factory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/za/co/swingy/model/Hero.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/za/co/swingy/model/Hero.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/za/co/swingy/model/ValidationModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/za/co/swingy/model/ValidationModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/za/co/swingy/model/characters/DeathNight.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/za/co/swingy/model/characters/DeathNight.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/za/co/swingy/model/characters/Druid.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/za/co/swingy/model/characters/Druid.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/za/co/swingy/model/characters/Hunter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/za/co/swingy/model/characters/Hunter.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -275,7 +282,21 @@
       <option name="project" value="LOCAL" />
       <updated>1567486054758</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="- Code refactoring&#10;- started on run() and fight() methods">
+      <created>1567486276846</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1567486276846</updated>
+    </task>
+    <task id="LOCAL-00020" summary="- Code refactoring">
+      <created>1567486375747</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1567486375747</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -339,9 +360,9 @@
     <MESSAGE value="- Code refactoring&#10;- Started implementing Map class" />
     <MESSAGE value="- Code refactoring&#10;- Started implementing Map class&#10;- Improved Error Logging for StorageController" />
     <MESSAGE value="- Code refactoring&#10;- Started implementing Map class&#10;- Now moving Hero through Map" />
-    <MESSAGE value="- Code refactoring" />
     <MESSAGE value="- Code refactoring&#10;- started on run() and fight() methods" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Code refactoring&#10;- started on run() and fight() methods" />
+    <MESSAGE value="- Code refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Code refactoring" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>

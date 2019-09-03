@@ -1,6 +1,7 @@
 package za.co.swingy.model;
 
 import org.hibernate.validator.constraints.Range;
+
 import javax.validation.ConstraintViolation;
 import javax.validation.Validation;
 import javax.validation.Validator;
@@ -14,7 +15,7 @@ public class ValidationModel {
     @Range(min = 1, max = 3, message = "No such option")
     private int firstMenu = 1; // 1
 
-//    @Size(min = 1, max = 50, message = "Name length >= 1 & <= 50")
+    @Size(min = 1, max = 50, message = "Name length >= 1 & <= 50")
 //    @NotNull(message = "Name cannot be empty")
     private String heroName  = "d "; // name 4
 
@@ -43,7 +44,10 @@ public class ValidationModel {
     public ValidationModel(String cmd, int class_) {
 
         if (class_ == 4) {
-            heroName = cmd;
+            if (cmd == null)
+                heroName = "";
+            else
+                heroName = cmd;
         } else if (class_ == 5) {
             move = cmd;
         }

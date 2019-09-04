@@ -205,6 +205,9 @@ public class Map {
                 ConsoleView.printToughShit();
                 fight(hero,enemy[rand]);
             }
+        } else {
+            System.out.println("Not a valid command");
+            fightOrFlight(hero, direction);
         }
     }
 

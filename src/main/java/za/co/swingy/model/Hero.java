@@ -1,13 +1,16 @@
 package za.co.swingy.model;
 
+import za.co.swingy.controller.StorageController;
+
 public abstract class Hero{
 
+
+    private StorageController sc = new StorageController();
     protected int id;
     protected int attack;
     protected int defense;
     protected int hp;
     protected int xp = 0;
-    protected int maxXp;
     protected int lvl = 1;
     protected int y,x;
     public String name;
@@ -30,42 +33,105 @@ public abstract class Hero{
         setXp(xp);
     }
 
-    public abstract int getId();
-    public abstract void setId(int id);
+    public int getId() {
+        return this.id;
+    }
 
-    public abstract String getName();
-    public abstract void setName(String name);
+    public void setId(int id) {
+        this.id = id;
+    }
 
-    public abstract int getAttack();
-    public abstract void setAttack(int attack);
+    public String getName() {
+        return this.name;
+    }
 
-    public abstract int getDefense();
-    public abstract void setDefense(int defense);
+    public int getAttack() {
+        return this.attack;
+    }
 
-    public abstract int getHp();
-    public abstract void setHp(int hp);
+    public void setAttack(int attack) {
+        this.attack = attack;
+    }
 
-    public abstract int getXp();
-    public abstract void setXp(int xp);
+    public int getDefense() {
+        return this.defense;
+    }
 
-    public abstract int getLvl();
-    public abstract void setLvl(int lvl);
+    public void setDefense(int defense) {
+        this.defense = defense;
+    }
 
-    public abstract int getY();
-    public abstract void setY(int y);
+    
+    public int getHp() {
+        return this.hp;
+    }
 
-    public abstract int getX();
-    public abstract void setX(int x);
+    
+    public void setHp(int hp) {
+        this.hp = hp;
+    }
 
-    public abstract String getType();
+    
+    public int getXp() {
+        return this.xp;
+    }
 
-    public abstract void levelUp();
+    
+    public void setXp(int xp) {
+        this.xp = xp;
+    }
 
-    public abstract void fight();
-    public abstract void run();
+    
+    public int getLvl() {
+        return this.lvl;
+    }
 
-    public abstract void gainXp(int points);
+    
+    public void setLvl(int lvl) {
+        this.lvl = lvl;
+    }
 
-    public abstract void reduceHp(int damage);
+    
+    public int getY() {
+        return this.y;
+    }
+
+    
+    public void setY(int y) {
+        this.y = y;
+    }
+
+    
+    public int getX() {
+        return this.x;
+    }
+
+    
+    public void setX(int x) {
+        this.x = x;
+    }
+
+    
+    public String getType() {
+        return this.type;
+    }
+    public void levelUp() {
+        lvl++;
+        this.attack = (int)(attack * 1.3);
+        this.defense = (int)(defense * 1.3);
+        this.hp = (int)(hp * 1.5);
+
+        System.out.println("Congrats! You leveled up!");
+        System.out.println("Map size increased.");
+    }
+
+    public void gainXp(int points) {
+        this.xp += points;
+        int maxXp = this.lvl * 1000 + (lvl - 1) * (lvl - 1) * 450;
+        if (this.xp >= maxXp) {
+            levelUp();
+        }
+        sc.updateStats(this);
+    }
 
 }

@@ -52,7 +52,7 @@ public class StorageController {
         int id = 0;
         try {
             String query = "SELECT id FROM " + db + ".hero " +
-                    "WHERE name = '"+hero.getName()+"';";
+                    "WHERE name = '" + hero.getName() + "';";
             ResultSet resultSet;
 
             resultSet = stmt.executeQuery(query);
@@ -145,7 +145,7 @@ public class StorageController {
         }
     }
 
-    static void deleteGame(Hero hero) throws SQLException {
+    static void deleteGame(Hero hero) {
         try {
             String query = "DELETE FROM "+ db + ".hero " + " WHERE name = ? AND id = ?;";
 
@@ -158,5 +158,22 @@ public class StorageController {
         } catch (SQLException e) {
             System.out.println("ERROR: " + "[" + new Exception().getStackTrace()[0].getMethodName() + "]" + " -> " + e.getMessage());
         }
+    }
+
+    boolean duplicatesExist(String name) {
+        try {
+            ResultSet resultSet;
+            String query = " SELECT COUNT(1) FROM " + db + ".hero WHERE name = '" + name + "';";
+
+            resultSet = stmt.executeQuery(query);
+
+            resultSet.next();
+
+            return resultSet.getInt(1) > 1;
+
+        } catch (SQLException e) {
+            System.out.println("ERROR: " + "[" + new Exception().getStackTrace()[0].getMethodName() + "]" + " -> " + e.getMessage());
+        }
+        return false;
     }
 }

@@ -147,6 +147,11 @@ public class ConsoleController {
         System.out.print(">> ");
         String name = input.nextLine();
 
+        if(sc.duplicatesExist(name)) {
+            System.out.println("Name already used! Please try again");
+            return nameHero(type);
+        }
+
         ValidationModel validationModel = new ValidationModel(name, 4);
         if (validationModel.validator(0, name, 4)) {
             return factory.newHero(types[type - 1], name);

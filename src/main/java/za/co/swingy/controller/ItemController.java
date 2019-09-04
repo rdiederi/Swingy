@@ -7,11 +7,11 @@ import za.co.swingy.model.items.Weapon;
 
 import java.util.Random;
 
-public class ItemController {
+class ItemController {
     private String itemType;
     private Item item;
 
-    public ItemController() {
+    ItemController() {
         Random rand = new Random();
         int randomItemIndex = rand.nextInt(11);
         String[] itemTypes = {"Weapon", "Armor", "Helm", "Armor", "Helm", "Weapon", "Helm", "Weapon", "Armor", "Armor", "Helm", "Weapon"};

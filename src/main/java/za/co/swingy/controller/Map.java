@@ -4,7 +4,7 @@ import za.co.swingy.model.Hero;
 
 import java.util.Random;
 
-public class Map {
+class Map {
 
     private String[][] map;
     private int middle;
@@ -12,13 +12,13 @@ public class Map {
     private int y;
     private int x;
 
-    public Map(){}
+    Map(){}
 
     String[][] getMap() {
         return map;
     }
 
-    public void setMap(Hero hero) {
+    void setMap(Hero hero) {
         int level = hero.getLvl();
 
         dimension = getMapDimensions(level);
@@ -48,16 +48,13 @@ public class Map {
     boolean edgeOfMap(Hero hero) {
         y = hero.getY();
         x = hero.getX();
-        if (y == 0 || x == 0 || y == map.length - 1 || x == map[y].length - 1)
-            return (true);
-        return (false);
+        return (y == 0 || x == 0 || y == map.length - 1 || x == map[y].length - 1);
     }
 
     private static boolean inArray(int[][] array, int[] vals)
     {
-        for (int x = 0; x < array.length; x++)
-        {
-            if (array[x][0] == vals[0] && array[x][1] == vals[1])
+        for (int[] ints : array) {
+            if (ints[0] == vals[0] && ints[1] == vals[1])
                 return (true);
         }
         return (false);

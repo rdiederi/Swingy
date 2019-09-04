@@ -147,11 +147,13 @@ public class StorageController {
 
     public static void deleteGame(Hero hero) throws SQLException {
         try {
-            String query = "DELETE FROM "+ db + ".hero " + " WHERE name = ?;";
+            String query = "DELETE FROM "+ db + ".hero " + " WHERE name = ? AND id = ?;";
 
             PreparedStatement statement = cnx.prepareStatement(query);
 
             statement.setString(1, hero.getName());
+            statement.setInt(2, hero.getId());
+
             statement.execute();
         } catch (SQLException e) {
             System.out.println("ERROR: " + "[" + new Exception().getStackTrace()[0].getMethodName() + "]" + " -> " + e.getMessage());

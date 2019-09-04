@@ -29,7 +29,7 @@ public class ConsoleController {
             System.out.println("Good Bye!!!!!");
             System.out.println("b) back to main menu");
             Scanner input = new Scanner(System.in);
-            String la = input.next();
+            input.next();
             StorageController.deleteGame(hero);
             ConsoleController.gameLoop();
         }
@@ -89,37 +89,37 @@ public class ConsoleController {
             if (!mapObj.edgeOfMap(hero)) {
                 switch (direction) {
                     case "n":
-                        map.moveUp(hero);
-                        if(map.isItem()) {
+                        mapObj.moveUp(hero);
+                        if(mapObj.isItem()) {
                             factory.newItem().applyItem(hero);
-                        } else if (map.isEnemy()) {
+                        } else if (mapObj.isEnemy()) {
                             // Fight or flight
                             fightOrFlight(hero,direction);
                         }
                         break;
                     case "s":
-                        map.moveDown(hero);
-                        if(map.isItem()) {
+                        mapObj.moveDown(hero);
+                        if(mapObj.isItem()) {
                             factory.newItem().applyItem(hero);
-                        } else if (map.isEnemy()) {
+                        } else if (mapObj.isEnemy()) {
                             // Fight or flight
                             fightOrFlight(hero,direction);
                         }
                         break;
                     case "e":
-                        map.moveRight(hero);
-                        if(map.isItem()) {
+                        mapObj.moveRight(hero);
+                        if(mapObj.isItem()) {
                             factory.newItem().applyItem(hero);
-                        } else if (map.isEnemy()) {
+                        } else if (mapObj.isEnemy()) {
                             // Fight or flight
                             fightOrFlight(hero,direction);
                         }
                         break;
                     case "w":
-                        map.moveLeft(hero);
-                        if(map.isItem()) {
+                        mapObj.moveLeft(hero);
+                        if(mapObj.isItem()) {
                             factory.newItem().applyItem(hero);
-                        } else if (map.isEnemy()) {
+                        } else if (mapObj.isEnemy()) {
                             // Fight or flight
                             fightOrFlight(hero,direction);
                         }

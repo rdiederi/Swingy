@@ -2,21 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="36a168e2-0830-417d-884f-cfa8ef05044b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/co/swingy/controller/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/co/swingy/controller/Map.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/co/swingy/model/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/co/swingy/model/Hero.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/za/co/swingy/model/characters/DeathNight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/co/swingy/model/characters/DeathNight.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/za/co/swingy/model/characters/Druid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/co/swingy/model/characters/Druid.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/za/co/swingy/model/characters/Hunter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/co/swingy/model/characters/Hunter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/za/co/swingy/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/za/co/swingy/App.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/za/co/swingy/controller/ConsoleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/za/co/swingy/controller/ConsoleController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/za/co/swingy/controller/Factory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/za/co/swingy/controller/Factory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/za/co/swingy/controller/Map.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/za/co/swingy/controller/Map.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/za/co/swingy/controller/StorageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/za/co/swingy/controller/StorageController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/za/co/swingy/model/items/Armor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/za/co/swingy/model/items/Armor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/za/co/swingy/model/items/Helm.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/za/co/swingy/model/items/Helm.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/za/co/swingy/model/items/Weapon.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/za/co/swingy/model/items/Weapon.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/za/co/swingy/view/ConsoleView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/za/co/swingy/view/ConsoleView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/za/co/swingy/model/Hero.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/za/co/swingy/model/Hero.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/za/co/swingy/model/characters/DeathNight.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/za/co/swingy/model/characters/DeathNight.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/za/co/swingy/model/characters/Druid.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/za/co/swingy/model/characters/Druid.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/za/co/swingy/model/characters/Hunter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/za/co/swingy/model/characters/Hunter.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -176,7 +168,7 @@
       <workItem from="1567497910830" duration="4045000" />
       <workItem from="1567513252772" duration="3027000" />
       <workItem from="1567530630673" duration="11276000" />
-      <workItem from="1567572797349" duration="1736000" />
+      <workItem from="1567572797349" duration="2063000" />
     </task>
     <task id="LOCAL-00001" summary="Added Stuff">
       <created>1566886178596</created>
@@ -297,7 +289,14 @@
       <option name="project" value="LOCAL" />
       <updated>1567145153574</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="- Code refactoring&#10;- Found bug in fightOrFlight&#10;- added update function to gainxp to update hero in database as soon as xp is gained">
+      <created>1567574878231</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1567574878231</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -362,7 +361,8 @@
     <MESSAGE value="- Code refactoring&#10;- Started implementing Map class" />
     <MESSAGE value="- Code refactoring&#10;- Started implementing Map class&#10;- Improved Error Logging for StorageController" />
     <MESSAGE value="- Code refactoring&#10;- Started implementing Map class&#10;- Now moving Hero through Map" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Code refactoring&#10;- Started implementing Map class&#10;- Now moving Hero through Map" />
+    <MESSAGE value="- Code refactoring&#10;- Found bug in fightOrFlight&#10;- added update function to gainxp to update hero in database as soon as xp is gained" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Code refactoring&#10;- Found bug in fightOrFlight&#10;- added update function to gainxp to update hero in database as soon as xp is gained" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>

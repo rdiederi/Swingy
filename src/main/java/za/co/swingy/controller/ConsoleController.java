@@ -16,8 +16,6 @@ public class ConsoleController {
     private static Map map = new Map();
 
     private static void fight(Hero hero, String enemy)  throws SQLException {
-        StorageController sc = new StorageController();
-
         boolean probability = Math.random() < 0.85;
 
         if (probability){

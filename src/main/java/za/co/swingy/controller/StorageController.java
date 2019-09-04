@@ -145,7 +145,7 @@ public class StorageController {
         }
     }
 
-    public static void deleteGame(Hero hero) throws SQLException {
+    static void deleteGame(Hero hero) throws SQLException {
         try {
             String query = "DELETE FROM "+ db + ".hero " + " WHERE name = ? AND id = ?;";
 

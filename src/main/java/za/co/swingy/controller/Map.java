@@ -1,12 +1,8 @@
 package za.co.swingy.controller;
 
 import za.co.swingy.model.Hero;
-import za.co.swingy.view.ConsoleView;
 
-import java.sql.SQLException;
-import java.util.Arrays;
 import java.util.Random;
-import java.util.Scanner;
 
 public class Map {
 
@@ -33,6 +29,17 @@ public class Map {
         return map;
     }
 
+    public void setMap(Hero hero) {
+        int level = hero.getLvl();
+
+        dimension = getMapDimensions(level);
+        middle = getMiddleOfMap(dimension);
+        map = generateMap(dimension, middle);
+
+        hero.setY(middle);
+        hero.setX(middle);
+    }
+
     int getDimension(){
         return dimension;
     }
@@ -49,7 +56,7 @@ public class Map {
         return ((dimension - 1) / 2);
     }
 
-    private boolean edgeOfMap(Hero hero) {
+    boolean edgeOfMap(Hero hero) {
         y = hero.getY();
         x = hero.getX();
         if (y == 0 || x == 0 || y == map.length - 1 || x == map[y].length - 1)
@@ -126,7 +133,7 @@ public class Map {
         return (pos);
     }
 
-    private void newMap(Hero hero) {
+    void newMap(Hero hero) {
         dimension = Map.getMapDimensions(hero.getLvl());
         middle = getMiddleOfMap(dimension);
         map = Map.generateMap(dimension, middle);
@@ -134,148 +141,31 @@ public class Map {
         hero.setY(middle);
     }
 
-    private void moveUp(Hero hero) {
+    void moveUp(Hero hero) {
         y--;
         hero.setY(hero.getY() - 1);
     }
 
-    private void moveDown(Hero hero) {
+    void moveDown(Hero hero) {
         y++;
         hero.setY(hero.getY() + 1);
     }
 
-    private void moveLeft(Hero hero) {
+    void moveLeft(Hero hero) {
         x--;
         hero.setX(hero.getX() - 1);
     }
 
-    private void moveRight(Hero hero) {
+    void moveRight(Hero hero) {
         x++;
         hero.setX(hero.getX() + 1);
     }
 
-    private boolean isEnemy() {
+    boolean isEnemy() {
             return "X".equalsIgnoreCase(map[y][x]);
         }
 
-    private boolean isItem() {
+    boolean isItem() {
         return "C".equalsIgnoreCase(map[y][x]);
-    }
-
-    private void fight(Hero hero, String enemy)  throws SQLException {
-        StorageController sc = new StorageController();
-
-        boolean probability = Math.random() < 0.5;
-
-        if (probability){
-            System.out.println("You killed "+ enemy);
-            hero.gainXp(50);
-        }
-        else{
-            ConsoleView.printGameOver(enemy);
-            System.out.println("Good Bye!!!!!");
-            System.out.println("b) back to main menu");
-            Scanner input = new Scanner(System.in);
-            String la = input.next();
-            StorageController.deleteGame(hero);
-            ConsoleController.gameLoop();
-        }
-    }
-
-    private void fightOrFlight(Hero hero, String direction) throws SQLException{
-        int min = 0;
-        int max = 4;
-        int range = max - min - 1;
-
-        String[] enemy = {"Bob", "Larry", "Jeff", "Justin", "Mufaro"};
-        int rand = (int)(Math.random() * range) + min;
-        boolean possibility = Math.random() < 0.5;
-
-        ConsoleView.printFightOrFlight(enemy[rand]);
-        Scanner input = new Scanner(System.in);
-        int cmd = input.nextInt();
-
-        if (cmd == 1){
-            fight(hero,enemy[rand]);
-        } else if (cmd == 2){
-            if (possibility){
-                goBack(hero, direction);
-                System.out.print(ConsoleView.CLR_CLI);
-            } else {
-                ConsoleView.printToughShit();
-                fight(hero,enemy[rand]);
-            }
-        } else {
-            System.out.println("Not a valid command");
-            fightOrFlight(hero, direction);
-        }
-    }
-
-    private void goBack(Hero hero, String direction) {
-        if (direction.equals("n"))
-            moveDown(hero);
-        if (direction.equals("e"))
-            moveLeft(hero);
-        if (direction.equals("s"))
-            moveUp(hero);
-        if (direction.equals("w"))
-            moveRight(hero);
-    }
-
-    void moveHero(String direction, Map mapObj, Hero hero) throws SQLException
-    {
-        String[] directions = new String[]{"n", "s", "e", "w"};
-        boolean result = Arrays.asList(directions).contains(direction);
-        String[][] map = mapObj.getMap();
-        Factory factory = new Factory();
-
-        if (result) {
-            map[hero.getY()][hero.getX()] = ".";
-            if (!mapObj.edgeOfMap(hero)) {
-                switch (direction) {
-                    case "n":
-                        moveUp(hero);
-                    if(isItem()) {
-                        factory.newItem().applyItem(hero);
-                    } else if (isEnemy()) {
-                        // Fight or flight
-                        fightOrFlight(hero,direction);
-                    }
-                        break;
-                    case "s":
-                        moveDown(hero);
-                    if(isItem()) {
-                        factory.newItem().applyItem(hero);
-                    } else if (isEnemy()) {
-                        // Fight or flight
-                        fightOrFlight(hero,direction);
-                    }
-                        break;
-                    case "e":
-                        moveRight(hero);
-                    if(isItem()) {
-                        factory.newItem().applyItem(hero);
-                    } else if (isEnemy()) {
-                        // Fight or flight
-                        fightOrFlight(hero,direction);
-                    }
-                        break;
-                    case "w":
-                        moveLeft(hero);
-                    if(isItem()) {
-                        factory.newItem().applyItem(hero);
-                    } else if (isEnemy()) {
-                        // Fight or flight
-                        fightOrFlight(hero,direction);
-                    }
-                        break;
-                }
-                map[hero.getY()][hero.getX()] = "1";
-            }
-            else {
-                hero.gainXp(hero.getLvl() * 555);
-                mapObj.newMap(hero);
-            }
-        }
     }
 }

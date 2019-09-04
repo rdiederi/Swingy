@@ -3,17 +3,138 @@ package za.co.swingy.controller;
 import za.co.swingy.model.Hero;
 import za.co.swingy.model.ValidationModel;
 import za.co.swingy.view.ConsoleView;
+
 import java.sql.SQLException;
+import java.util.Arrays;
 import java.util.InputMismatchException;
 import java.util.Scanner;
-import java.util.concurrent.TimeUnit;
 
 public class ConsoleController {
-    static Hero hero;
-    static StorageController sc = new StorageController();
-    static Factory factory = new Factory();
+    private static Hero hero;
+    private static StorageController sc = new StorageController();
+    private static Factory factory = new Factory();
+    private static Map map = new Map();
 
-    public static Hero nameHero(int type) {
+    private static void fight(Hero hero, String enemy)  throws SQLException {
+        StorageController sc = new StorageController();
+
+        boolean probability = Math.random() < 0.5;
+
+        if (probability){
+            System.out.println("You killed "+ enemy);
+            hero.gainXp(50);
+        }
+        else{
+            ConsoleView.printGameOver(enemy);
+            System.out.println("Good Bye!!!!!");
+            System.out.println("b) back to main menu");
+            Scanner input = new Scanner(System.in);
+            String la = input.next();
+            StorageController.deleteGame(hero);
+            ConsoleController.gameLoop();
+        }
+    }
+
+    private static void fightOrFlight(Hero hero, String direction) throws SQLException, InputMismatchException{
+        try {
+            int min = 0;
+            int max = 4;
+            int range = max - min - 1;
+
+            String[] enemy = {"Bob", "Larry", "Jeff", "Justin", "Mufaro"};
+            int rand = (int) (Math.random() * range) + min;
+            boolean possibility = Math.random() < 0.5;
+
+            ConsoleView.printFightOrFlight(enemy[rand]);
+            Scanner input = new Scanner(System.in);
+            int cmd = input.nextInt();
+
+            if (cmd == 1) {
+                fight(hero, enemy[rand]);
+            } else if (cmd == 2) {
+                if (possibility) {
+                    goBack(hero, direction);
+                    System.out.print(ConsoleView.CLR_CLI);
+                } else {
+                    ConsoleView.printToughShit();
+                    fight(hero, enemy[rand]);
+                }
+            }
+        }catch (InputMismatchException e) {
+            System.out.println("Not a valid command");
+            fightOrFlight(hero, direction);
+        }
+    }
+
+    private static void goBack(Hero hero, String direction) {
+        if (direction.equals("n"))
+            map.moveDown(hero);
+        if (direction.equals("e"))
+            map.moveLeft(hero);
+        if (direction.equals("s"))
+            map.moveUp(hero);
+        if (direction.equals("w"))
+            map.moveRight(hero);
+    }
+
+    private static void moveHero(String direction, Map mapObj, Hero hero) throws SQLException
+    {
+        String[] directions = new String[]{"n", "s", "e", "w"};
+        boolean result = Arrays.asList(directions).contains(direction);
+        String[][] lvl = mapObj.getMap();
+        Factory factory = new Factory();
+
+        if (result) {
+            lvl[hero.getY()][hero.getX()] = ".";
+            if (!mapObj.edgeOfMap(hero)) {
+                switch (direction) {
+                    case "n":
+                        map.moveUp(hero);
+                        if(map.isItem()) {
+                            factory.newItem().applyItem(hero);
+                        } else if (map.isEnemy()) {
+                            // Fight or flight
+                            fightOrFlight(hero,direction);
+                        }
+                        break;
+                    case "s":
+                        map.moveDown(hero);
+                        if(map.isItem()) {
+                            factory.newItem().applyItem(hero);
+                        } else if (map.isEnemy()) {
+                            // Fight or flight
+                            fightOrFlight(hero,direction);
+                        }
+                        break;
+                    case "e":
+                        map.moveRight(hero);
+                        if(map.isItem()) {
+                            factory.newItem().applyItem(hero);
+                        } else if (map.isEnemy()) {
+                            // Fight or flight
+                            fightOrFlight(hero,direction);
+                        }
+                        break;
+                    case "w":
+                        map.moveLeft(hero);
+                        if(map.isItem()) {
+                            factory.newItem().applyItem(hero);
+                        } else if (map.isEnemy()) {
+                            // Fight or flight
+                            fightOrFlight(hero,direction);
+                        }
+                        break;
+                }
+                lvl[hero.getY()][hero.getX()] = "1";
+            }
+            else {
+                hero.gainXp(hero.getLvl() * 555);
+                mapObj.newMap(hero);
+            }
+        }
+    }
+
+    private static Hero nameHero(int type) {
 
         String[] types = {
             "Druid",
@@ -32,8 +153,8 @@ public class ConsoleController {
         return nameHero(type);
     }
 
-    public static Hero createHero(StorageController sc) throws NumberFormatException {
-        Hero hero = null;
+    private static Hero createHero(StorageController sc) throws NumberFormatException {
+        Hero hero;
         System.out.print(ConsoleView.CLR_CLI);
         ConsoleView.printHeroClasses();
         System.out.print(">> ");
@@ -55,9 +176,8 @@ public class ConsoleController {
         return hero;
     }
 
-    public static void startGame(Hero hero) throws InputMismatchException, SQLException {
-        Map map;
-        map = factory.newMap(hero);
+    private static void startGame(Hero hero) throws InputMismatchException, SQLException {
+        map.setMap(hero);
         String move;
         Scanner input = new Scanner(System.in);
 
@@ -71,7 +191,7 @@ public class ConsoleController {
             ValidationModel validationModel = new ValidationModel(move, 5);
             if (!validationModel.validator(0, move, 5))
                 continue;
-            map.moveHero(move, map, hero);
+            moveHero(move, map, hero);
         }
     }
 
@@ -120,7 +240,6 @@ public class ConsoleController {
                 }
             } catch (InputMismatchException e) {
                 System.out.print(ConsoleView.CLR_CLI);
-                continue;
             }
         }
     }

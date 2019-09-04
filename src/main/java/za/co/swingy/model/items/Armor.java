@@ -14,23 +14,13 @@ public class Armor implements Item {
         stat = (int) (10 + Math.floor( (Math.random() * 70) + 1));
     }
 
-    public Armor(String name) {
-        this.name = name;
-        stat =  (int) (10 + Math.floor( (Math.random() * 70) + 1));
-    }
-
     public String getName() {
         return name;
     }
 
-    private int getStat() {
-        return stat;
-    }
-
-
     @Override
     public void applyItem(Hero hero) {
-        hero.setDefense(hero.getDefense() + getStat());
+        hero.setDefense(hero.getDefense() + this.stat);
         sc.updateStats(hero);
         System.out.println("|Item found! Hero picks up -> " + name + ": +" + stat + "|");
     }

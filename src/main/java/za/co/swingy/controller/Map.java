@@ -14,17 +14,6 @@ public class Map {
 
     public Map(){}
 
-    Map(Hero hero) {
-        int level = hero.getLvl();
-
-        dimension = getMapDimensions(level);
-        middle = getMiddleOfMap(dimension);
-        map = generateMap(dimension, middle);
-
-        hero.setY(middle);
-        hero.setX(middle);
-    }
-
     String[][] getMap() {
         return map;
     }
@@ -77,17 +66,17 @@ public class Map {
     private static String[][] generateMap(int dimension, int middle)
     {
         String[][] newMap = new String[dimension][dimension];
-        int numOfVillans = Math.round(((dimension * dimension) * 50) / 100);
-        int[][] villansCoordinates = new int[numOfVillans][2];
+        int nubOfVillains = Math.round(((dimension * dimension) * 50) / 100);
+        int[][] villainsCoordinates = new int[nubOfVillains][2];
         int numOfItems = Math.round(((dimension * dimension) * 12) / 100);
         int[][] itemsCoordinates = new int[numOfItems][2];
 
 
-        for (int i = 0; i < numOfVillans; i++)
+        for (int i = 0; i < nubOfVillains; i++)
         {
             int[] position = generatePosition(dimension);
-            if (position[1] != middle && !inArray(villansCoordinates, position))
-                villansCoordinates[i] = position;
+            if (position[1] != middle && !inArray(villainsCoordinates, position))
+                villainsCoordinates[i] = position;
             else
                 i--;
         }
@@ -95,7 +84,7 @@ public class Map {
         for (int i = 0; i < numOfItems; i++)
         {
             int[] position = generatePosition(dimension);
-            if (position[1] != middle && !inArray(itemsCoordinates, position) && !inArray(villansCoordinates, position))
+            if (position[1] != middle && !inArray(itemsCoordinates, position) && !inArray(villainsCoordinates, position))
                 itemsCoordinates[i] = position;
             else
                 i--;
@@ -106,7 +95,7 @@ public class Map {
             for (int x = 0; x < dimension; x++)
             {
                 int[] tmp = {y,x};
-                if (inArray(villansCoordinates, tmp))
+                if (inArray(villainsCoordinates, tmp))
                     newMap[y][x] = "X";
                 else if (inArray(itemsCoordinates, tmp))
                     newMap[y][x] = "C";

@@ -14,23 +14,13 @@ public class Weapon implements Item {
         stat = (int) (10 + Math.floor( (Math.random() * 70) + 1));
     }
 
-    public Weapon(String name) {
-        this.name = name;
-        stat =  (int) (10 + Math.floor( (Math.random() * 70) + 1));
-    }
-
     public String getName() {
         return name;
     }
 
-    public int getStat() {
-        return stat;
-    }
-
-
     @Override
     public void applyItem(Hero hero) {
-        hero.setAttack(hero.getAttack() + getStat());
+        hero.setAttack(hero.getAttack() + this.stat);
         sc.updateStats(hero);
         System.out.println("|Item found! Hero picks up -> " + name + ": +" + stat + "|");
     }

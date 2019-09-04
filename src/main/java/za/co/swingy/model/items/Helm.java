@@ -14,23 +14,13 @@ public class Helm implements Item {
         stat =  (int) (10 + Math.floor( (Math.random() * 70) + 1));
     }
 
-    public Helm(String name) {
-        this.name = name;
-        stat =  (int) (10 + Math.floor( (Math.random() * 70) + 1));
-    }
-
     public String getName() {
         return name;
     }
 
-    public int getStat() {
-        return stat;
-    }
-
-
     @Override
     public void applyItem(Hero hero) {
-        hero.setHp(hero.getHp() + getStat());
+        hero.setHp(hero.getHp() + this.stat);
         sc.updateStats(hero);
         System.out.println("|Item found! Hero picks up -> " + name + ": +" + stat + "|");
     }

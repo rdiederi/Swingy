@@ -25,8 +25,4 @@ class Factory {
         item = ic.dropItem();
         return item;
     }
-
-    static Map newMap(Hero hero) {
-        return new Map(hero);
-    }
 }

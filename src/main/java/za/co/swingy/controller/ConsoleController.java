@@ -18,7 +18,7 @@ public class ConsoleController {
     private static void fight(Hero hero, String enemy)  throws SQLException {
         StorageController sc = new StorageController();
 
-        boolean probability = Math.random() < 0.5;
+        boolean probability = Math.random() < 0.85;
 
         if (probability){
             System.out.println("You killed "+ enemy);

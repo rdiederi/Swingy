@@ -59,6 +59,9 @@ public class ConsoleController {
                     ConsoleView.printToughShit();
                     fight(hero, enemy[rand]);
                 }
+            } else {
+                System.out.println("Not a valid command");
+                fightOrFlight(hero, direction);
             }
         }catch (InputMismatchException e) {
             System.out.println("Not a valid command");

@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="36a168e2-0830-417d-884f-cfa8ef05044b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/java/za/co/swingy/controller/ConsoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/co/swingy/controller/ConsoleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/co/swingy/controller/StorageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/co/swingy/controller/StorageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/za/co/swingy/controller/ConsoleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/za/co/swingy/controller/ConsoleController.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -164,7 +162,7 @@
       <workItem from="1567497910830" duration="4045000" />
       <workItem from="1567513252772" duration="3027000" />
       <workItem from="1567530630673" duration="11276000" />
-      <workItem from="1567572797349" duration="4736000" />
+      <workItem from="1567572797349" duration="5012000" />
     </task>
     <task id="LOCAL-00001" summary="Added Stuff">
       <created>1566886178596</created>
@@ -320,7 +318,14 @@
       <option name="project" value="LOCAL" />
       <updated>1567577375149</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="- Code refactoring&#10;- Found bug in fightOrFlight, player is able to return to map if wrong (int) is entered">
+      <created>1567577830152</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1567577830153</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -389,7 +394,8 @@
     <MESSAGE value="- Code refactoring&#10;- Fixed bug on fightOrFight screen where it was returning to the main menu after invalid input (char &amp; !str)" />
     <MESSAGE value="- Code refactoring&#10;- Deleted unused code" />
     <MESSAGE value="- Code refactoring&#10;- Changed probability of hero winning fight to 85 %" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Code refactoring&#10;- Changed probability of hero winning fight to 85 %" />
+    <MESSAGE value="- Code refactoring&#10;- Found bug in fightOrFlight, player is able to return to map if wrong (int) is entered" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Code refactoring&#10;- Found bug in fightOrFlight, player is able to return to map if wrong (int) is entered" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>

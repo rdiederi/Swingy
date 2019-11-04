@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="36a168e2-0830-417d-884f-cfa8ef05044b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/co/swingy/controller/ConsoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/co/swingy/controller/ConsoleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/co/swingy/controller/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/co/swingy/controller/Map.java" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+        <option name="lookForNested" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1PouL2LFYgr4MyZKuYOi6RJMPWj" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main" />
+      <recent name="$PROJECT_DIR$/src/main/java/Database" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.App">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="za.co.swingy.App" />
+      <module name="roelf" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="11" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
+      <option name="MAIN_CLASS_NAME" value="controller.Main" />
+      <module name="roelf" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="za.co.swingy.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.App" />
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="36a168e2-0830-417d-884f-cfa8ef05044b" name="Default Changelist" comment="" />
+      <created>1566552713277</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1566552713277</updated>
+      <workItem from="1566552727409" duration="630000" />
+      <workItem from="1566564484692" duration="7586000" />
+      <workItem from="1566806846144" duration="9018000" />
+      <workItem from="1566838231719" duration="4109000" />
+      <workItem from="1566880086722" duration="9940000" />
+      <workItem from="1566929590413" duration="1844000" />
+      <workItem from="1566964168971" duration="8512000" />
+      <workItem from="1566995915810" duration="991000" />
+      <workItem from="1567051539530" duration="13443000" />
+      <workItem from="1567093517493" duration="234000" />
+      <workItem from="1567106018198" duration="12334000" />
+      <workItem from="1567138269734" duration="7000000" />
+    </task>
+    <task id="LOCAL-00001" summary="Added Stuff">
+      <created>1566886178596</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1566886178596</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Added Stuff">
+      <created>1566886206005</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1566886206005</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Now saving character to db when new game is started">
+      <created>1566889866705</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1566889866705</updated>
+    </task>
+    <task id="LOCAL-00004" summary="- Code refactoring&#10;- Added hibernate and javax validation dependencies&#10;- Added maven-jar-plugin to compile swingy jar">
+      <created>1566970149612</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1566970149613</updated>
+    </task>
+    <task id="LOCAL-00005" summary="- Code refactoring">
+      <created>1566971649903</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1566971649903</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Added maven-assembly-plugin to compile to a single executable jar with all dependencies">
+      <created>1566977050802</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1566977050802</updated>
+    </task>
+    <task id="LOCAL-00007" summary="- Created Factory to create characters and drop items (incomplete)&#10;- Added Item interface&#10;- More code refactoring to suit builder design pattern">
+      <created>1567059669988</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1567059669988</updated>
+    </task>
+    <task id="LOCAL-00008" summary="- Code refactoring&#10;- More Detail in Items (Armor...)&#10;- Added ItemController">
+      <created>1567069285266</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1567069285266</updated>
+    </task>
+    <task id="LOCAL-00009" summary="- Code refactoring&#10;- Added a few more annotations for certain values">
+      <created>1567071633833</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1567071633833</updated>
+    </task>
+    <task id="LOCAL-00010" summary="- Code refactoring&#10;- Added id to hero class to store id in class from database">
+      <created>1567072608765</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1567072608765</updated>
+    </task>
+    <task id="LOCAL-00011" summary="- Code refactoring&#10;- Added id to hero class to store id in class from database">
+      <created>1567073298426</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1567073298426</updated>
+    </task>
+    <task id="LOCAL-00012" summary="- Code refactoring&#10;- Implemented Factory method newHero">
+      <created>1567107411326</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1567107411326</updated>
+    </task>
+    <task id="LOCAL-00013" summary="- Code refactoring&#10;- Created and implement loadHero method">
+      <created>1567120459154</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1567120459154</updated>
+    </task>
+    <task id="LOCAL-00014" summary="- Code refactoring&#10;- Formatted loading screen">
+      <created>1567121068228</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1567121068228</updated>
+    </task>
+    <task id="LOCAL-00015" summary="- Code refactoring&#10;- Started implementing Map class">
+      <created>1567140249026</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1567140249026</updated>
+    </task>
+    <task id="LOCAL-00016" summary="- Code refactoring&#10;- Started implementing Map class&#10;- Improved Error Logging for StorageController">
+      <created>1567141881746</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1567141881746</updated>
+    </task>
+    <task id="LOCAL-00017" summary="- Code refactoring&#10;- Started implementing Map class&#10;- Now moving Hero through Map">
+      <created>1567145153574</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1567145153574</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="1">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="structure">
+                    <value>
+                      <list>
+                        <option value="dir:/goinfre/chadams/Desktop/projects/roelf/src/main/java/model" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="OPEN_TABS">
+      <set>
+        <option value="1" />
+      </set>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added Stuff" />
+    <MESSAGE value="Now saving character to db when new game is started" />
+    <MESSAGE value="- Code refactoring&#10;- Added hibernate and javax validation dependencies&#10;- Added maven-jar-plugin to compile swingy jar" />
+    <MESSAGE value="- Code refactoring" />
+    <MESSAGE value="Added maven-assembly-plugin to compile to a single executable jar with all dependencies" />
+    <MESSAGE value="- Created Factory to create characters and drop items (incomplete)&#10;- Added Item interface&#10;- More code refactoring to suit builder design pattern" />
+    <MESSAGE value="- Code refactoring&#10;- More Detail in Items (Armor...)&#10;- Added ItemController" />
+    <MESSAGE value="- Code refactoring&#10;- Added a few more annotations for certain values" />
+    <MESSAGE value="- Code refactoring&#10;- Added id to hero class to store id in class from database" />
+    <MESSAGE value="- Code refactoring&#10;- Implemented Factory method newHero" />
+    <MESSAGE value="- Code refactoring&#10;- Created and implement loadHero method" />
+    <MESSAGE value="- Code refactoring&#10;- Formatted loading screen" />
+    <MESSAGE value="- Code refactoring&#10;- Started implementing Map class" />
+    <MESSAGE value="- Code refactoring&#10;- Started implementing Map class&#10;- Improved Error Logging for StorageController" />
+    <MESSAGE value="- Code refactoring&#10;- Started implementing Map class&#10;- Now moving Hero through Map" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Code refactoring&#10;- Started implementing Map class&#10;- Now moving Hero through Map" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
+</project>
